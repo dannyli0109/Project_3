@@ -3805,3 +3805,16 @@ Processing by Api::TrendsController#show as */*
 Completed 200 OK in 261ms (Views: 1.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-07-25 20:49:51 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 432ms (Views: 175.4ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 20:49:51 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 320ms (Views: 2.3ms)
+
+
