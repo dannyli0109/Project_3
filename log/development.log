@@ -8,3 +8,19 @@
   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4578808096422711270)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-07-25 07:48:53 +1000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Rachie/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Rachie/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/welcome/index.html.erb (9.8ms)
+Completed 200 OK in 713ms (Views: 24.8ms)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2017-07-25 07:48:59 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/Rachie/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/Rachie/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [8 times] (23.4ms)
+  Rendered /Users/Rachie/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (25.7ms)
+  Rendered /Users/Rachie/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 83ms (Views: 73.8ms)
+
+
