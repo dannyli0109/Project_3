@@ -914,3 +914,1930 @@ Completed 200 OK in 25ms (Views: 22.8ms)
 Completed 200 OK in 974ms (Views: 0.9ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-07-25 13:52:02 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 395ms (Views: 152.7ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 13:52:02 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 991ms (Views: 1.8ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 13:52:11 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 37ms (Views: 32.6ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 13:52:39 +1000
+Processing by Api::TrendsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1009ms (Views: 2.4ms)
+
+
+Started GET "/api/news/scott" for 127.0.0.1 at 2017-07-25 13:52:57 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"scott"}
+Completed 406 Not Acceptable in 52ms
+
+
+  
+ActionController::UnknownFormat (Api::NewsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 13:54:18 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 14.3ms)
+
+
+Started GET "/rails/info" for 127.0.0.1 at 2017-07-25 13:54:31 +1000
+Processing by Rails::InfoController#index as HTML
+Redirected to http://localhost:3000/rails/info/routes
+Completed 302 Found in 1ms
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2017-07-25 13:54:31 +1000
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/xiaohaoli/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/xiaohaoli/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [4 times] (1.7ms)
+  Rendered /Users/xiaohaoli/.rvm/gems/ruby-2.4.1/gems/actionpack-5.1.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.6ms)
+  Rendered /Users/xiaohaoli/.rvm/gems/ruby-2.4.1/gems/railties-5.1.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 24ms (Views: 20.6ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 13:54:52 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 16ms (Views: 13.8ms)
+
+
+Started GET "/api/news/1" for 127.0.0.1 at 2017-07-25 13:55:10 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"1"}
+Completed 406 Not Acceptable in 50ms
+
+
+  
+ActionController::UnknownFormat (Api::NewsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-07-25 13:55:21 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 25.2ms)
+
+
+Started GET "/api/news/1" for 127.0.0.1 at 2017-07-25 13:56:20 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"1"}
+Completed 500 Internal Server Error in 3ms
+
+
+  
+ActionView::MissingTemplate (Missing template api/news/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/xiaohaoli/Documents/wdi/project/project_3/project_3/app/views"
+):
+  
+app/controllers/api/news_controller.rb:4:in `show'
+Started GET "/" for 127.0.0.1 at 2017-07-25 13:58:00 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 22.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 13:58:02 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 13.6ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 13:58:03 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 992ms (Views: 1.0ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 13:58:09 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 17.3ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 13:58:35 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 12.9ms)
+
+
+Started GET "/api/news/1" for 127.0.0.1 at 2017-07-25 14:08:27 +1000
+  
+SyntaxError (/Users/xiaohaoli/Documents/wdi/project/project_3/project_3/app/controllers/api/news_controller.rb:8: syntax error, unexpected '=', expecting keyword_end
+    =%22Derrick%20Rose%22%20site_ty
+     ^
+/Users/xiaohaoli/Documents/wdi/project/project_3/project_3/app/controllers/api/news_controller.rb:8: unknown type of %string
+    =%22Derrick%20Rose%22%20site_type%
+        ^):
+  
+app/controllers/api/news_controller.rb:8: syntax error, unexpected '=', expecting keyword_end
+app/controllers/api/news_controller.rb:8: unknown type of %string
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 14:09:02 +1000
+  
+SyntaxError (/Users/xiaohaoli/Documents/wdi/project/project_3/project_3/app/controllers/api/news_controller.rb:8: syntax error, unexpected '=', expecting keyword_end
+    =%22Derrick%20Rose%22%20site_ty
+     ^
+/Users/xiaohaoli/Documents/wdi/project/project_3/project_3/app/controllers/api/news_controller.rb:8: unknown type of %string
+    =%22Derrick%20Rose%22%20site_type%
+        ^):
+  
+app/controllers/api/news_controller.rb:8: syntax error, unexpected '=', expecting keyword_end
+app/controllers/api/news_controller.rb:8: unknown type of %string
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 14:09:25 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 19.4ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 14:09:36 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 13.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 14:09:39 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 21.1ms)
+
+
+Started GET "/pages/S1" for 127.0.0.1 at 2017-07-25 14:09:45 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"S1"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 11.9ms)
+
+
+Started GET "/pages/1" for 127.0.0.1 at 2017-07-25 14:09:53 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"1"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 12.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 14:09:57 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 18.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 14:10:00 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 12.7ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 14:10:00 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 958ms (Views: 1.0ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 14:10:29 +1000
+Processing by Api::TrendsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 986ms (Views: 1.0ms)
+
+
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 14:13:46 +1000
+  
+SyntaxError (/Users/xiaohaoli/Documents/wdi/project/project_3/project_3/app/controllers/api/news_controller.rb:6: syntax error, unexpected tCONSTANT, expecting keyword_end
+led&"+"UNHCR"+site_type%3Anews%20thread.country%3AAU
+                              ^
+/Users/xiaohaoli/Documents/wdi/project/project_3/project_3/app/controllers/api/news_controller.rb:6: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+HCR"+site_type%3Anews%20thread.country%3AAU
+                              ^
+/Users/xiaohaoli/Documents/wdi/project/project_3/project_3/app/controllers/api/news_controller.rb:6: syntax error, unexpected tCONSTANT, expecting keyword_end
+e%3Anews%20thread.country%3AAU
+                              ^):
+  
+app/controllers/api/news_controller.rb:6: syntax error, unexpected tCONSTANT, expecting keyword_end
+app/controllers/api/news_controller.rb:6: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/controllers/api/news_controller.rb:6: syntax error, unexpected tCONSTANT, expecting keyword_end
+Started GET "/api/news/1" for 127.0.0.1 at 2017-07-25 14:14:19 +1000
+  
+SyntaxError (/Users/xiaohaoli/Documents/wdi/project/project_3/project_3/app/controllers/api/news_controller.rb:6: syntax error, unexpected tCONSTANT, expecting keyword_end
+led&"+"UNHCR"+site_type%3Anews%20thread.country%3AAU
+                              ^
+/Users/xiaohaoli/Documents/wdi/project/project_3/project_3/app/controllers/api/news_controller.rb:6: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+HCR"+site_type%3Anews%20thread.country%3AAU
+                              ^
+/Users/xiaohaoli/Documents/wdi/project/project_3/project_3/app/controllers/api/news_controller.rb:6: syntax error, unexpected tCONSTANT, expecting keyword_end
+e%3Anews%20thread.country%3AAU
+                              ^):
+  
+app/controllers/api/news_controller.rb:6: syntax error, unexpected tCONSTANT, expecting keyword_end
+app/controllers/api/news_controller.rb:6: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/controllers/api/news_controller.rb:6: syntax error, unexpected tCONSTANT, expecting keyword_end
+Started GET "/api/news/1" for 127.0.0.1 at 2017-07-25 14:15:10 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 52ms
+
+
+  
+ActionController::UnknownFormat (Api::NewsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/news/1" for 127.0.0.1 at 2017-07-25 14:15:48 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 48ms
+
+
+  
+ActionController::UnknownFormat (Api::NewsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/news/1" for 127.0.0.1 at 2017-07-25 14:15:50 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 45ms
+
+
+  
+ActionController::UnknownFormat (Api::NewsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/news/1" for 127.0.0.1 at 2017-07-25 14:18:11 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 45ms
+
+
+  
+ActionController::UnknownFormat (Api::NewsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started PUT "/__web_console/repl_sessions/ad6e6418de65f1194177e5e5e7b5ae1c" for 127.0.0.1 at 2017-07-25 14:21:08 +1000
+Started PUT "/__web_console/repl_sessions/ad6e6418de65f1194177e5e5e7b5ae1c" for 127.0.0.1 at 2017-07-25 14:21:10 +1000
+Started GET "/api/news/1" for 127.0.0.1 at 2017-07-25 14:21:52 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 48ms
+
+
+  
+ActionController::UnknownFormat (Api::NewsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-07-25 14:22:59 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 16.6ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 14:22:59 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 969ms (Views: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 14:26:03 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 17.5ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 14:26:04 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1031ms (Views: 1.1ms)
+
+
+Started GET "/api/news/1" for 127.0.0.1 at 2017-07-25 14:27:43 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 406 Not Acceptable in 46ms
+
+
+  
+ActionController::UnknownFormat (Api::NewsController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.2) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.2) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.2) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.2) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.2) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.2) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.2) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.2) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.2) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.2) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-07-25 14:44:11 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 23.5ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 14:44:11 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1054ms (Views: 0.9ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 14:44:13 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 17.7ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 14:44:14 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 14.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 14:44:41 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 24ms (Views: 22.2ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 14:44:41 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1037ms (Views: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 14:45:09 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 17.2ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 14:45:10 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1033ms (Views: 1.1ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 14:45:40 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 22.8ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 14:46:27 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 16.3ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 14:47:56 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 15ms (Views: 12.8ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 14:53:12 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 382ms (Views: 135.4ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 14:53:20 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 16.1ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 14:54:26 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 46ms (Views: 42.7ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 14:56:00 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 31.8ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 14:56:09 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 36ms (Views: 33.8ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 14:56:46 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 23.9ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 14:57:28 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 16.6ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 14:58:44 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 24ms (Views: 22.4ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:00:32 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 24.6ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:01:16 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 16.5ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:02:29 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 16.9ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:05:55 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 21.9ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:06:18 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 24.9ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:09:02 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 18.5ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:09:05 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 19.7ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:09:05 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 16.2ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:09:06 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 15.4ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:09:28 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 26.4ms)
+
+
+Started GET "/api/news/jdsahkdhj" for 127.0.0.1 at 2017-07-25 15:11:01 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"jdsahkdhj"}
+Completed 500 Internal Server Error in 3ms
+
+
+  
+NoMethodError (undefined method `request_uri' for #<String:0x007fab5a9274f0>):
+  
+app/controllers/api/news_controller.rb:8:in `show'
+Started GET "/api/news/jdsahkdhj" for 127.0.0.1 at 2017-07-25 15:12:21 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"jdsahkdhj"}
+Started GET "/api/news/jdsahkdhj" for 127.0.0.1 at 2017-07-25 15:12:26 +1000
+Completed 500 Internal Server Error in 6205ms
+
+
+  
+RuntimeError (stop):
+  
+app/controllers/api/news_controller.rb:11:in `show'
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"jdsahkdhj"}
+Started GET "/api/news/jdsahkdhj" for 127.0.0.1 at 2017-07-25 15:12:29 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"jdsahkdhj"}
+Completed 500 Internal Server Error in 4638ms
+
+
+  
+RuntimeError (stop):
+  
+app/controllers/api/news_controller.rb:11:in `show'
+Completed 500 Internal Server Error in 4707ms
+
+
+  
+RuntimeError (stop):
+  
+app/controllers/api/news_controller.rb:11:in `show'
+Started PUT "/__web_console/repl_sessions/3f327b96d0843e925c04735fe81b7bd4" for 127.0.0.1 at 2017-07-25 15:12:40 +1000
+Started PUT "/__web_console/repl_sessions/3f327b96d0843e925c04735fe81b7bd4" for 127.0.0.1 at 2017-07-25 15:12:41 +1000
+Started GET "/api/news/jdsahkdhj" for 127.0.0.1 at 2017-07-25 15:14:11 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"jdsahkdhj"}
+Completed 200 OK in 4349ms (Views: 24.6ms)
+
+
+Started GET "/api/news/jdsahkdhj" for 127.0.0.1 at 2017-07-25 15:15:41 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"jdsahkdhj"}
+Completed 200 OK in 15135ms (Views: 84.8ms)
+
+
+Started GET "/api/news/jdsahkdhj" for 127.0.0.1 at 2017-07-25 15:18:37 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"jdsahkdhj"}
+Completed 500 Internal Server Error in 7478ms
+
+
+  
+NoMethodError (undefined method `title' for #<Hash:0x007fab54cb2468>):
+  
+app/controllers/api/news_controller.rb:7:in `show'
+Started GET "/api/news/jdsahkdhj" for 127.0.0.1 at 2017-07-25 15:19:37 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"jdsahkdhj"}
+Completed 500 Internal Server Error in 5021ms
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/api/news_controller.rb:7:in `[]'
+app/controllers/api/news_controller.rb:7:in `show'
+Started GET "/api/news/jdsahkdhj" for 127.0.0.1 at 2017-07-25 15:19:58 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"jdsahkdhj"}
+Completed 200 OK in 4862ms (Views: 0.2ms)
+
+
+Started GET "/api/news/jdsahkdhj" for 127.0.0.1 at 2017-07-25 15:21:18 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"jdsahkdhj"}
+Completed 200 OK in 5089ms (Views: 94.5ms)
+
+
+Started GET "/api/news/jdsahkdhj" for 127.0.0.1 at 2017-07-25 15:22:21 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"id"=>"jdsahkdhj"}
+Completed 200 OK in 4946ms (Views: 0.7ms)
+
+
+Started GET "/api/news/jdsahkdhj" for 127.0.0.1 at 2017-07-25 15:27:34 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"jdsahkdhj"}
+Completed 200 OK in 5444ms (Views: 0.9ms)
+
+
+Started GET "/pages/show" for 127.0.0.1 at 2017-07-25 15:27:59 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"show"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 19.0ms)
+
+
+Started GET "/api/news/show" for 127.0.0.1 at 2017-07-25 15:27:59 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"show"}
+Completed 200 OK in 4993ms (Views: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 15:28:14 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 16.5ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 15:28:15 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1013ms (Views: 1.1ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:28:20 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 21.0ms)
+
+
+Started GET "/api/news/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:28:20 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Scott Thompson"}
+Completed 200 OK in 5202ms (Views: 0.9ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:29:18 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 24.3ms)
+
+
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 15:29:19 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"name"}
+Started GET "/" for 127.0.0.1 at 2017-07-25 15:29:26 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 26.6ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 15:29:26 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1033ms (Views: 7.2ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:29:29 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 23.6ms)
+
+
+Completed 200 OK in 11207ms (Views: 0.8ms)
+
+
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 15:29:30 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"name"}
+Completed 200 OK in 7244ms (Views: 0.8ms)
+
+
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 15:29:37 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"name"}
+Completed 200 OK in 5221ms (Views: 0.9ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 15:30:29 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 916ms (Views: 1.1ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:30:30 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 15:30:30 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"name"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 53ms (Views: 50.4ms)
+
+
+Started GET "/api/news/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:30:30 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Scott Thompson"}
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:30:34 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 16.8ms)
+
+
+Completed 200 OK in 5187ms (Views: 3.2ms)
+
+
+Started GET "/api/news/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:30:35 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Scott Thompson"}
+Completed 200 OK in 5609ms (Views: 1.4ms)
+
+
+Completed 200 OK in 5106ms (Views: 0.7ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:31:34 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 22.8ms)
+
+
+Started GET "/api/news/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:31:34 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Scott Thompson"}
+Completed 200 OK in 5447ms (Views: 0.9ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:32:50 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 20.7ms)
+
+
+Started GET "/api/news/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:32:50 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Scott Thompson"}
+Completed 200 OK in 5717ms (Views: 0.8ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:33:39 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 27ms (Views: 25.1ms)
+
+
+Started GET "/api/news/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:33:40 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Scott Thompson"}
+Completed 200 OK in 5313ms (Views: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 15:33:48 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 20.0ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 15:33:48 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 998ms (Views: 1.2ms)
+
+
+Started GET "/pages/MS%20Paint" for 127.0.0.1 at 2017-07-25 15:33:50 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"MS Paint"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 18.4ms)
+
+
+Started GET "/api/news/MS%20Paint" for 127.0.0.1 at 2017-07-25 15:33:50 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"MS Paint"}
+Completed 200 OK in 18647ms (Views: 0.9ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 15:34:20 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 990ms (Views: 1.2ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:34:22 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 19.6ms)
+
+
+Started GET "/api/news/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:34:22 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Scott Thompson"}
+Completed 200 OK in 19546ms (Views: 0.8ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:37:18 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.0ms)
+
+
+Started GET "/api/news/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:37:19 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Scott Thompson"}
+Completed 200 OK in 6948ms (Views: 0.8ms)
+
+
+Started GET "/pages/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:38:47 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Scott Thompson"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 25.9ms)
+
+
+Started GET "/api/news/Scott%20Thompson" for 127.0.0.1 at 2017-07-25 15:38:47 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Scott Thompson"}
+Completed 200 OK in 5058ms (Views: 0.9ms)
+
+
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 15:39:00 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"name"}
+Completed 200 OK in 5350ms (Views: 0.8ms)
+
+
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 15:39:46 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"name"}
+Completed 200 OK in 5103ms (Views: 0.2ms)
+
+
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 15:42:48 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"name"}
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 15:42:51 +1000
+Completed 500 Internal Server Error in 5133ms
+
+
+  
+ActionView::MissingTemplate (Missing template api/news/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/xiaohaoli/Documents/wdi/project/project_3/project_3/app/views"
+):
+  
+app/controllers/api/news_controller.rb:14:in `show'
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"name"}
+Completed 500 Internal Server Error in 5510ms
+
+
+  
+ActionView::MissingTemplate (Missing template api/news/show, application/show with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/xiaohaoli/Documents/wdi/project/project_3/project_3/app/views"
+):
+  
+app/controllers/api/news_controller.rb:14:in `show'
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 15:44:39 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"name"}
+Completed 500 Internal Server Error in 14309ms
+
+
+  
+NameError (undefined local variable or method `image_url' for #<Api::NewsController:0x007fab55f7c058>):
+  
+app/controllers/api/news_controller.rb:9:in `show'
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 15:45:08 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"name"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (stop):
+  
+app/controllers/api/news_controller.rb:6:in `show'
+Started PUT "/__web_console/repl_sessions/cd7e4d19be33aef9eb334f572972382d" for 127.0.0.1 at 2017-07-25 15:45:10 +1000
+Started PUT "/__web_console/repl_sessions/cd7e4d19be33aef9eb334f572972382d" for 127.0.0.1 at 2017-07-25 15:45:11 +1000
+Started GET "/" for 127.0.0.1 at 2017-07-25 15:47:10 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 21.2ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 15:47:10 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 933ms (Views: 1.3ms)
+
+
+Started GET "/pages/Chad%20Wingard" for 127.0.0.1 at 2017-07-25 15:47:13 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Chad Wingard"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 23.1ms)
+
+
+Started GET "/api/news/Chad%20Wingard" for 127.0.0.1 at 2017-07-25 15:47:13 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Chad Wingard"}
+Completed 500 Internal Server Error in 2ms
+
+
+  
+RuntimeError (stop):
+  
+app/controllers/api/news_controller.rb:6:in `show'
+Started GET "/api/news/Chad%20Wingard" for 127.0.0.1 at 2017-07-25 15:47:36 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"Chad Wingard"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (stop):
+  
+app/controllers/api/news_controller.rb:6:in `show'
+Started GET "/" for 127.0.0.1 at 2017-07-25 15:47:53 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 23.5ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 15:47:53 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1037ms (Views: 1.2ms)
+
+
+Started GET "/pages/HigherEd" for 127.0.0.1 at 2017-07-25 15:47:56 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"HigherEd"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 22.7ms)
+
+
+Started GET "/api/news/HigherEd" for 127.0.0.1 at 2017-07-25 15:47:56 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"HigherEd"}
+Completed 500 Internal Server Error in 18003ms
+
+
+  
+NameError (undefined local variable or method `image_url' for #<Api::NewsController:0x007fab5a93f8c0>):
+  
+app/controllers/api/news_controller.rb:11:in `show'
+Started GET "/api/news/HigherEd" for 127.0.0.1 at 2017-07-25 15:48:20 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"HigherEd"}
+Completed 500 Internal Server Error in 7382ms
+
+
+  
+NameError (undefined local variable or method `image_url' for #<Api::NewsController:0x007fab5b03f670>):
+  
+app/controllers/api/news_controller.rb:11:in `show'
+Started GET "/api/news/HigherEd" for 127.0.0.1 at 2017-07-25 15:48:35 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"HigherEd"}
+Completed 500 Internal Server Error in 9131ms
+
+
+  
+NameError (undefined local variable or method `image_url' for #<Api::NewsController:0x007fab5b34a2c0>):
+  
+app/controllers/api/news_controller.rb:11:in `show'
+Started GET "/api/news/HigherEd" for 127.0.0.1 at 2017-07-25 15:48:58 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"HigherEd"}
+Completed 200 OK in 6923ms (Views: 1.2ms)
+
+
+Started GET "/api/news/hello" for 127.0.0.1 at 2017-07-25 15:49:25 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"hello"}
+Completed 200 OK in 4896ms (Views: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 15:50:18 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 23.7ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 15:50:18 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 979ms (Views: 1.0ms)
+
+
+Started GET "/pages/MasterChefAU" for 127.0.0.1 at 2017-07-25 15:50:21 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"MasterChefAU"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 26ms (Views: 23.9ms)
+
+
+Started GET "/api/news/MasterChefAU" for 127.0.0.1 at 2017-07-25 15:50:21 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"MasterChefAU"}
+Completed 200 OK in 951ms (Views: 0.3ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 15:51:19 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1015ms (Views: 1.2ms)
+
+
+Started GET "/pages/MS%20Paint" for 127.0.0.1 at 2017-07-25 15:51:21 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"MS Paint"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 20.4ms)
+
+
+Started GET "/api/news/MS%20Paint" for 127.0.0.1 at 2017-07-25 15:51:21 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"MS Paint"}
+Completed 200 OK in 4697ms (Views: 0.3ms)
+
+
+Started GET "/pages/MS%20Paint" for 127.0.0.1 at 2017-07-25 16:00:47 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"MS Paint"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 20.4ms)
+
+
+Started GET "/api/news/MS%20Paint" for 127.0.0.1 at 2017-07-25 16:00:47 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"MS Paint"}
+Completed 200 OK in 5472ms (Views: 0.2ms)
+
+
+Started GET "/pages/MS%20Paint" for 127.0.0.1 at 2017-07-25 16:02:49 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"MS Paint"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 15.9ms)
+
+
+Started GET "/api/news/MS%20Paint" for 127.0.0.1 at 2017-07-25 16:02:49 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"MS Paint"}
+Completed 200 OK in 1429ms (Views: 0.2ms)
+
+
+Started GET "/pages/MS%20Paint" for 127.0.0.1 at 2017-07-25 16:18:49 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"MS Paint"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 24.7ms)
+
+
+Started GET "/api/news/MS%20Paint" for 127.0.0.1 at 2017-07-25 16:18:49 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"MS Paint"}
+Completed 500 Internal Server Error in 1489ms
+
+
+  
+NoMethodError (undefined method `push' for {}:Hash):
+  
+app/controllers/api/news_controller.rb:14:in `block in show'
+app/controllers/api/news_controller.rb:13:in `each'
+app/controllers/api/news_controller.rb:13:in `show'
+Started GET "/" for 127.0.0.1 at 2017-07-25 16:19:01 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 21.9ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 16:19:01 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1021ms (Views: 2.7ms)
+
+
+Started GET "/pages/Carmichael" for 127.0.0.1 at 2017-07-25 16:19:05 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Carmichael"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 32ms (Views: 28.6ms)
+
+
+Started GET "/api/news/Carmichael" for 127.0.0.1 at 2017-07-25 16:19:05 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Carmichael"}
+Completed 500 Internal Server Error in 1574ms
+
+
+  
+NoMethodError (undefined method `push' for {}:Hash):
+  
+app/controllers/api/news_controller.rb:14:in `block in show'
+app/controllers/api/news_controller.rb:13:in `each'
+app/controllers/api/news_controller.rb:13:in `show'
+Started GET "/pages/Carmichael" for 127.0.0.1 at 2017-07-25 16:19:32 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Carmichael"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 21.7ms)
+
+
+Started GET "/api/news/Carmichael" for 127.0.0.1 at 2017-07-25 16:19:32 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Carmichael"}
+Completed 500 Internal Server Error in 1756ms
+
+
+  
+NoMethodError (undefined method `push' for {}:Hash):
+  
+app/controllers/api/news_controller.rb:14:in `block in show'
+app/controllers/api/news_controller.rb:13:in `each'
+app/controllers/api/news_controller.rb:13:in `show'
+Started GET "/pages/Carmichael" for 127.0.0.1 at 2017-07-25 16:20:51 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Carmichael"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 15.0ms)
+
+
+Started GET "/api/news/Carmichael" for 127.0.0.1 at 2017-07-25 16:20:51 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Carmichael"}
+Completed 500 Internal Server Error in 1704ms
+
+
+  
+NoMethodError (undefined method `push' for {}:Hash):
+  
+app/controllers/api/news_controller.rb:14:in `block in show'
+app/controllers/api/news_controller.rb:13:in `each'
+app/controllers/api/news_controller.rb:13:in `show'
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 16:21:10 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"name"}
+Completed 500 Internal Server Error in 1550ms
+
+
+  
+NoMethodError (undefined method `push' for {}:Hash):
+  
+app/controllers/api/news_controller.rb:14:in `block in show'
+app/controllers/api/news_controller.rb:13:in `each'
+app/controllers/api/news_controller.rb:13:in `show'
+Started PUT "/__web_console/repl_sessions/a981618b6dc8c2bc52cf53af07cf216a" for 127.0.0.1 at 2017-07-25 16:21:18 +1000
+Started PUT "/__web_console/repl_sessions/a981618b6dc8c2bc52cf53af07cf216a" for 127.0.0.1 at 2017-07-25 16:21:20 +1000
+Started PUT "/__web_console/repl_sessions/a981618b6dc8c2bc52cf53af07cf216a" for 127.0.0.1 at 2017-07-25 16:21:44 +1000
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 16:22:33 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"name"}
+Completed 500 Internal Server Error in 1696ms
+
+
+  
+NoMethodError (undefined method `push' for {}:Hash):
+  
+app/controllers/api/news_controller.rb:14:in `block in show'
+app/controllers/api/news_controller.rb:13:in `each'
+app/controllers/api/news_controller.rb:13:in `show'
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 16:23:26 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"name"}
+Completed 500 Internal Server Error in 1226ms
+
+
+  
+RuntimeError (stop):
+  
+app/controllers/api/news_controller.rb:17:in `show'
+Started PUT "/__web_console/repl_sessions/32bfbab6a80d9c5e1da63968e045ce4e" for 127.0.0.1 at 2017-07-25 16:23:37 +1000
+Started PUT "/__web_console/repl_sessions/32bfbab6a80d9c5e1da63968e045ce4e" for 127.0.0.1 at 2017-07-25 16:23:37 +1000
+Started GET "/pages/show" for 127.0.0.1 at 2017-07-25 16:24:31 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"show"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 19ms (Views: 16.5ms)
+
+
+Started GET "/api/news/show" for 127.0.0.1 at 2017-07-25 16:24:32 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"show"}
+Completed 200 OK in 1322ms (Views: 0.4ms)
+
+
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 16:25:39 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"name"}
+Completed 200 OK in 2519ms (Views: 0.3ms)
+
+
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 16:26:51 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"name"}
+Completed 200 OK in 1435ms (Views: 0.5ms)
+
+
+Started GET "/api/news/name" for 127.0.0.1 at 2017-07-25 16:27:34 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"name"}
+Completed 200 OK in 1250ms (Views: 0.7ms)
+
+
+Started GET "/pages/show" for 127.0.0.1 at 2017-07-25 16:28:12 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"show"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 14.1ms)
+
+
+Started GET "/api/news/show" for 127.0.0.1 at 2017-07-25 16:28:12 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"show"}
+Completed 200 OK in 1516ms (Views: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 16:28:38 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 16.2ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 16:28:38 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1040ms (Views: 1.1ms)
+
+
+Started GET "/pages/Ripponlea" for 127.0.0.1 at 2017-07-25 16:28:41 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Ripponlea"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 20.6ms)
+
+
+Started GET "/api/news/Ripponlea" for 127.0.0.1 at 2017-07-25 16:28:41 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Ripponlea"}
+Completed 200 OK in 870ms (Views: 0.3ms)
+
+
+Started GET "/pages/Ripponlea" for 127.0.0.1 at 2017-07-25 16:29:36 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Ripponlea"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 16.3ms)
+
+
+Started GET "/api/news/Ripponlea" for 127.0.0.1 at 2017-07-25 16:29:36 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Ripponlea"}
+Completed 200 OK in 905ms (Views: 0.3ms)
+
+
+Started GET "/pages/Ripponlea" for 127.0.0.1 at 2017-07-25 16:39:04 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Ripponlea"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 19.9ms)
+
+
+Started GET "/api/news/Ripponlea" for 127.0.0.1 at 2017-07-25 16:39:05 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Ripponlea"}
+Completed 200 OK in 897ms (Views: 0.4ms)
+
+

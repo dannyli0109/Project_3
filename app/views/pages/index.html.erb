@@ -11,7 +11,10 @@ $.ajax({
 }).done(function(res){
   $("ul").html("")
   res.forEach(function(element) {
-    $("ul").append($("<li>" + '<a href="/pages/'+ element["name"] + '">' + element["name"] + "</a>" + "</li>"))
+    var url = '/pages/' + element["name"]
+    var link = $("<a>").attr('href', url).text(element["name"])
+    var li = $("<li>").append(link);
+    $("ul").append(li)
   })
 
 })
