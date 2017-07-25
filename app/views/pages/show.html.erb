@@ -1,33 +1,58 @@
-<h1><%= @name %></h1>
 
-<div></div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<div class="container">
+<div class="row news-container">
+
+</div>
+</div>
+
+<script id="news-result-template" type="template">
+<div class="col-sm-6 col-lg-4" style="height: 300px">
+  <div class="thumbnail">
+    <img src={{ image_url }} style="max-height: 200px">
+    <div class="caption">
+      <a href={{ url }}>{{ title }}</a>
+    </div>
+  </div>
+</div>
+</script>
+
 <script>
 var name = "<%= @name %>"
+var $newsContainer = $(".news-container")
+
+
+
+
 
 $.ajax({
   url: "/api/news/" + name
 }).done(function(res) {
-  console.log(res)
-  $("div").html("")
-  res.forEach(function(element) {
-    var para = $("<h3>").text(element["title"]);
-    $("div").append(para)
-    // var image = $("<img>").attr('src', )
-    // var url = $("<p>").text(element[])
-  })
-})
-//   url: "http://webhose.io/filterWebContent?token=dbe50032-f200-456e-8767-e35a3267fc54&format=json&ts=1500696728138&sort=crawled&q=%22" + name + "%22%20site_type%3Anews%20thread.country%3AAU"
-// }).done(function(res){
-//   console.log(res)
-//   $("ul").html("")
-//   for(var i = 0; i < res.posts.length; i++){
-//   console.log(res.posts[i].title)
-//     $("ul").append($("<li>" + res.posts[i].title + "</li>"))
-// }
-// })
 
-// })
+
+  res.forEach(function(element) {
+    // if (element["image_url"] == null) {
+    //   element["image_url"] = "https://extension.ucsd.edu/UCSDExtension/media/UCSDExtensionsMedia/placeholder.png"
+    // }
+    // testImage(element["image_url"]);
+
+    var source = $('#news-result-template').html()
+    var template = Handlebars.compile(source)
+    $newsContainer.append(template(element))
+
+
+  })
+  $("img")
+      .on('load', function() { console.log("image loaded correctly"); })
+      .on('error', function(event) { console.log($(event.target).attr("src","https://extension.ucsd.edu/UCSDExtension/media/UCSDExtensionsMedia/placeholder.png")); })
+  ;
+
+})
+
+
+
+
+
+
 
 </script>
