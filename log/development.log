@@ -2841,3 +2841,966 @@ Processing by Api::NewsController#show as */*
 Completed 200 OK in 897ms (Views: 0.4ms)
 
 
+Started GET "/api/news/car" for 127.0.0.1 at 2017-07-25 17:32:43 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"car"}
+Completed 500 Internal Server Error in 2890ms
+
+
+  
+SyntaxError (/Users/xiaohaoli/Documents/wdi/project/project_3/project_3/app/models/news.rb:2: syntax error, unexpected ':', expecting keyword_end
+  attr_accessor :title :image_url :url
+                        ^):
+  
+app/models/news.rb:2: syntax error, unexpected ':', expecting keyword_end
+app/controllers/api/news_controller.rb:14:in `block in show'
+app/controllers/api/news_controller.rb:13:in `each'
+app/controllers/api/news_controller.rb:13:in `show'
+Started GET "/api/news/car" for 127.0.0.1 at 2017-07-25 17:33:13 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"car"}
+Completed 200 OK in 1242ms (Views: 0.8ms)
+
+
+Started GET "/api/news/car" for 127.0.0.1 at 2017-07-25 17:34:06 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"car"}
+Completed 500 Internal Server Error in 1504ms
+
+
+  
+RuntimeError (stop):
+  
+app/controllers/api/news_controller.rb:14:in `block in show'
+app/controllers/api/news_controller.rb:13:in `each'
+app/controllers/api/news_controller.rb:13:in `show'
+Started PUT "/__web_console/repl_sessions/83b603834126cc5cfc64f117abe08cd0" for 127.0.0.1 at 2017-07-25 17:34:11 +1000
+Started PUT "/__web_console/repl_sessions/83b603834126cc5cfc64f117abe08cd0" for 127.0.0.1 at 2017-07-25 17:34:12 +1000
+Started PUT "/__web_console/repl_sessions/83b603834126cc5cfc64f117abe08cd0" for 127.0.0.1 at 2017-07-25 17:34:20 +1000
+Started PUT "/__web_console/repl_sessions/83b603834126cc5cfc64f117abe08cd0" for 127.0.0.1 at 2017-07-25 17:35:26 +1000
+Started PUT "/__web_console/repl_sessions/83b603834126cc5cfc64f117abe08cd0" for 127.0.0.1 at 2017-07-25 17:35:49 +1000
+Started GET "/api/news/car" for 127.0.0.1 at 2017-07-25 17:36:56 +1000
+Processing by Api::NewsController#show as HTML
+  Parameters: {"name"=>"car"}
+Completed 200 OK in 1498ms (Views: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 17:37:13 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 30.5ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 17:37:13 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 969ms (Views: 1.0ms)
+
+
+Started GET "/api/news/Ripponlea" for 127.0.0.1 at 2017-07-25 17:37:14 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Ripponlea"}
+Started GET "/pages/Ripponlea" for 127.0.0.1 at 2017-07-25 17:37:15 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Ripponlea"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 18.4ms)
+
+
+Completed 200 OK in 1460ms (Views: 0.4ms)
+
+
+Started GET "/pages/Ripponlea" for 127.0.0.1 at 2017-07-25 17:39:24 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Ripponlea"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 23.5ms)
+
+
+Started GET "/api/news/Ripponlea" for 127.0.0.1 at 2017-07-25 17:39:24 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Ripponlea"}
+Completed 200 OK in 1276ms (Views: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 18:01:02 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 26.4ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:01:02 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/" for 127.0.0.1 at 2017-07-25 18:01:04 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 17.9ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:01:04 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1180ms (Views: 1.4ms)
+
+
+Completed 200 OK in 3270ms (Views: 1.2ms)
+
+
+Started GET "/pages/Matt%20Canavan" for 127.0.0.1 at 2017-07-25 18:01:08 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Matt Canavan"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 20.4ms)
+
+
+Started GET "/api/news/Matt%20Canavan" for 127.0.0.1 at 2017-07-25 18:01:08 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Matt Canavan"}
+Completed 200 OK in 2193ms (Views: 0.5ms)
+
+
+Started GET "/pages/Matt%20Canavan" for 127.0.0.1 at 2017-07-25 18:04:39 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Matt Canavan"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.4ms)
+
+
+Started GET "/api/news/Matt%20Canavan" for 127.0.0.1 at 2017-07-25 18:04:39 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Matt Canavan"}
+Started GET "/" for 127.0.0.1 at 2017-07-25 18:05:02 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 19.9ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:05:02 +1000
+Processing by Api::TrendsController#show as */*
+Completed 200 OK in 34305ms (Views: 0.5ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:05:14 +1000
+Started GET "/" for 127.0.0.1 at 2017-07-25 18:05:14 +1000
+  Parameters: {"id"=>"1"}
+Processing by Api::TrendsController#show as */*
+Processing by PagesController#index as HTML
+  Parameters: {"id"=>"1"}
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 14.1ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:05:14 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 2875ms (Views: 1.7ms)
+
+
+Completed 200 OK in 2882ms (Views: 10.1ms)
+
+
+Completed 200 OK in 2737ms (Views: 0.9ms)
+
+
+Started GET "/pages/ICAC" for 127.0.0.1 at 2017-07-25 18:05:24 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"ICAC"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 19.8ms)
+
+
+Started GET "/api/news/ICAC" for 127.0.0.1 at 2017-07-25 18:05:24 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"ICAC"}
+Completed 200 OK in 2345ms (Views: 0.6ms)
+
+
+Started GET "/pages/ICAC" for 127.0.0.1 at 2017-07-25 18:15:20 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"ICAC"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 28.6ms)
+
+
+Started GET "/api/news/ICAC" for 127.0.0.1 at 2017-07-25 18:15:21 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"ICAC"}
+Completed 200 OK in 2424ms (Views: 0.6ms)
+
+
+Started GET "/pages/ICAC" for 127.0.0.1 at 2017-07-25 18:19:50 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"ICAC"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 31ms (Views: 28.7ms)
+
+
+Started GET "/api/news/ICAC" for 127.0.0.1 at 2017-07-25 18:19:50 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"ICAC"}
+Completed 200 OK in 1970ms (Views: 1.4ms)
+
+
+Started GET "/pages/" for 127.0.0.1 at 2017-07-25 18:22:28 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/pages"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/pages/ICAC" for 127.0.0.1 at 2017-07-25 18:22:30 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"ICAC"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 25.6ms)
+
+
+Started GET "/api/news/ICAC" for 127.0.0.1 at 2017-07-25 18:22:30 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"ICAC"}
+Completed 200 OK in 1625ms (Views: 0.6ms)
+
+
+Started GET "/pages/ICAC" for 127.0.0.1 at 2017-07-25 18:24:58 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"ICAC"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 20.6ms)
+
+
+Started GET "/api/news/ICAC" for 127.0.0.1 at 2017-07-25 18:24:58 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"ICAC"}
+Completed 200 OK in 2340ms (Views: 1.1ms)
+
+
+Started GET "/pages/ICAC" for 127.0.0.1 at 2017-07-25 18:35:17 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"ICAC"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 41ms (Views: 36.0ms)
+
+
+Started GET "/api/news/ICAC" for 127.0.0.1 at 2017-07-25 18:35:18 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"ICAC"}
+Completed 200 OK in 2552ms (Views: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 18:35:30 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 32ms (Views: 29.4ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:35:30 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 311ms (Views: 3.4ms)
+
+
+Started GET "/pages/TheRunHome" for 127.0.0.1 at 2017-07-25 18:35:33 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"TheRunHome"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 56ms (Views: 50.1ms)
+
+
+Started GET "/api/news/TheRunHome" for 127.0.0.1 at 2017-07-25 18:35:33 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"TheRunHome"}
+Completed 200 OK in 925ms (Views: 0.2ms)
+
+
+Started GET "/pages/TheRunHome" for 127.0.0.1 at 2017-07-25 18:38:07 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"TheRunHome"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 19ms (Views: 16.8ms)
+
+
+Started GET "/api/news/TheRunHome" for 127.0.0.1 at 2017-07-25 18:38:07 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"TheRunHome"}
+Completed 500 Internal Server Error in 723ms
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/api/news_controller.rb:13:in `show'
+Started GET "/pages/TheRunHome" for 127.0.0.1 at 2017-07-25 18:38:37 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"TheRunHome"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 20.0ms)
+
+
+Started GET "/api/news/TheRunHome" for 127.0.0.1 at 2017-07-25 18:38:38 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"TheRunHome"}
+Completed 200 OK in 1139ms (Views: 0.2ms)
+
+
+Started GET "/pages/TheRunHome" for 127.0.0.1 at 2017-07-25 18:38:53 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"TheRunHome"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 13.8ms)
+
+
+Started GET "/api/news/TheRunHome" for 127.0.0.1 at 2017-07-25 18:38:54 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"TheRunHome"}
+Completed 200 OK in 1095ms (Views: 0.2ms)
+
+
+Started GET "/pages/TheRunHome" for 127.0.0.1 at 2017-07-25 18:38:59 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"TheRunHome"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 18.1ms)
+
+
+Started GET "/api/news/TheRunHome" for 127.0.0.1 at 2017-07-25 18:38:59 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"TheRunHome"}
+Completed 200 OK in 847ms (Views: 0.2ms)
+
+
+Started GET "/pages/TheRunHome" for 127.0.0.1 at 2017-07-25 18:39:07 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"TheRunHome"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 12.9ms)
+
+
+Started GET "/api/news/TheRunHome" for 127.0.0.1 at 2017-07-25 18:39:07 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"TheRunHome"}
+Completed 200 OK in 1174ms (Views: 0.2ms)
+
+
+Started GET "/pages/TheRunHome" for 127.0.0.1 at 2017-07-25 18:39:34 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"TheRunHome"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 26.4ms)
+
+
+Started GET "/api/news/TheRunHome" for 127.0.0.1 at 2017-07-25 18:39:35 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"TheRunHome"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (stop):
+  
+app/controllers/api/news_controller.rb:7:in `show'
+Started GET "/pages/TheRunHome" for 127.0.0.1 at 2017-07-25 18:39:36 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"TheRunHome"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 19ms (Views: 16.7ms)
+
+
+Started GET "/api/news/TheRunHome" for 127.0.0.1 at 2017-07-25 18:39:36 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"TheRunHome"}
+Completed 500 Internal Server Error in 1ms
+
+
+  
+RuntimeError (stop):
+  
+app/controllers/api/news_controller.rb:7:in `show'
+Started GET "/pages/TheRunHome" for 127.0.0.1 at 2017-07-25 18:41:29 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"TheRunHome"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 13.4ms)
+
+
+Started GET "/api/news/TheRunHome" for 127.0.0.1 at 2017-07-25 18:41:29 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"TheRunHome"}
+Completed 200 OK in 895ms (Views: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 18:41:33 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 21.0ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:41:33 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 384ms (Views: 0.9ms)
+
+
+Started GET "/pages/wanews" for 127.0.0.1 at 2017-07-25 18:41:35 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"wanews"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 22.1ms)
+
+
+Started GET "/api/news/wanews" for 127.0.0.1 at 2017-07-25 18:41:35 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"wanews"}
+Completed 200 OK in 1404ms (Views: 0.4ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:41:40 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 254ms (Views: 1.0ms)
+
+
+Started GET "/pages/Barnaby%20Joyce" for 127.0.0.1 at 2017-07-25 18:41:41 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Barnaby Joyce"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 21.7ms)
+
+
+Started GET "/api/news/Barnaby%20Joyce" for 127.0.0.1 at 2017-07-25 18:41:41 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Barnaby Joyce"}
+Completed 200 OK in 1519ms (Views: 0.4ms)
+
+
+Started GET "/pages/Barnaby%20Joyce" for 127.0.0.1 at 2017-07-25 18:42:46 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Barnaby Joyce"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 18.5ms)
+
+
+Started GET "/api/news/Barnaby%20Joyce" for 127.0.0.1 at 2017-07-25 18:42:46 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Barnaby Joyce"}
+Completed 200 OK in 1051ms (Views: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 18:42:50 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 23.6ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:42:50 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 382ms (Views: 1.5ms)
+
+
+Started GET "/pages/MS%20Paint" for 127.0.0.1 at 2017-07-25 18:42:52 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"MS Paint"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 20.9ms)
+
+
+Started GET "/api/news/MS%20Paint" for 127.0.0.1 at 2017-07-25 18:42:52 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"MS Paint"}
+Completed 200 OK in 1011ms (Views: 0.3ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:42:57 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 253ms (Views: 1.4ms)
+
+
+Started GET "/pages/Sirius" for 127.0.0.1 at 2017-07-25 18:42:57 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Sirius"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 20.1ms)
+
+
+Started GET "/api/news/Sirius" for 127.0.0.1 at 2017-07-25 18:42:58 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Sirius"}
+Completed 200 OK in 994ms (Views: 0.2ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:43:01 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 280ms (Views: 0.8ms)
+
+
+Started GET "/pages/Matt%20Canavan" for 127.0.0.1 at 2017-07-25 18:43:02 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Matt Canavan"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 17.8ms)
+
+
+Started GET "/api/news/Matt%20Canavan" for 127.0.0.1 at 2017-07-25 18:43:02 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Matt Canavan"}
+Completed 200 OK in 1554ms (Views: 0.4ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:43:06 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 265ms (Views: 1.2ms)
+
+
+Started GET "/pages/Derrick%20Rose" for 127.0.0.1 at 2017-07-25 18:43:07 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Derrick Rose"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 20.5ms)
+
+
+Started GET "/api/news/Derrick%20Rose" for 127.0.0.1 at 2017-07-25 18:43:07 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Derrick Rose"}
+Completed 200 OK in 1430ms (Views: 0.3ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:43:11 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 336ms (Views: 1.1ms)
+
+
+Started GET "/pages/Ripponlea" for 127.0.0.1 at 2017-07-25 18:43:12 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Ripponlea"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 19.1ms)
+
+
+Started GET "/api/news/Ripponlea" for 127.0.0.1 at 2017-07-25 18:43:12 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Ripponlea"}
+Completed 200 OK in 986ms (Views: 0.3ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:43:14 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 452ms (Views: 1.5ms)
+
+
+Started GET "/pages/HYBPA" for 127.0.0.1 at 2017-07-25 18:43:16 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"HYBPA"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 21.3ms)
+
+
+Started GET "/api/news/HYBPA" for 127.0.0.1 at 2017-07-25 18:43:16 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"HYBPA"}
+Completed 200 OK in 1012ms (Views: 0.2ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:43:18 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 247ms (Views: 1.7ms)
+
+
+Started GET "/pages/Matt%20Canavan" for 127.0.0.1 at 2017-07-25 18:43:20 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Matt Canavan"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (1.0ms)
+Started GET "/api/news/Matt%20Canavan" for 127.0.0.1 at 2017-07-25 18:43:20 +1000
+Completed 200 OK in 31ms (Views: 28.3ms)
+
+
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Matt Canavan"}
+Completed 200 OK in 1104ms (Views: 0.3ms)
+
+
+Started GET "/api/news/Matt%20Canavan" for 127.0.0.1 at 2017-07-25 18:43:21 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Matt Canavan"}
+Completed 200 OK in 1005ms (Views: 0.3ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:43:22 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 497ms (Views: 1.2ms)
+
+
+Started GET "/pages/UNHCR" for 127.0.0.1 at 2017-07-25 18:44:28 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"UNHCR"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 18.7ms)
+
+
+Started GET "/api/news/UNHCR" for 127.0.0.1 at 2017-07-25 18:44:28 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"UNHCR"}
+Completed 200 OK in 1034ms (Views: 0.2ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:44:31 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 339ms (Views: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 18:44:35 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 16.6ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:44:35 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 393ms (Views: 6.8ms)
+
+
+Started GET "/pages/Sirius" for 127.0.0.1 at 2017-07-25 18:44:37 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Sirius"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 21.6ms)
+
+
+Started GET "/api/news/Sirius" for 127.0.0.1 at 2017-07-25 18:44:37 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Sirius"}
+Completed 200 OK in 1053ms (Views: 0.3ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:44:39 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 296ms (Views: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 18:44:42 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 18ms (Views: 16.1ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:44:42 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 265ms (Views: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 18:44:43 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 17.9ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:44:43 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 255ms (Views: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 18:44:45 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 19.2ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:44:45 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 451ms (Views: 2.0ms)
+
+
+Started GET "/pages/thedrum" for 127.0.0.1 at 2017-07-25 18:44:48 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"thedrum"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 21.9ms)
+
+
+Started GET "/api/news/thedrum" for 127.0.0.1 at 2017-07-25 18:44:48 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"thedrum"}
+Completed 200 OK in 910ms (Views: 0.2ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:44:51 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 280ms (Views: 1.2ms)
+
+
+Started GET "/pages/Texas" for 127.0.0.1 at 2017-07-25 18:44:52 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Texas"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 20.8ms)
+
+
+Started GET "/api/news/Texas" for 127.0.0.1 at 2017-07-25 18:44:53 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Texas"}
+Completed 200 OK in 1347ms (Views: 0.6ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:45:03 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 250ms (Views: 0.9ms)
+
+
+Started GET "/pages/gamingthesystem" for 127.0.0.1 at 2017-07-25 18:45:10 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"gamingthesystem"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 18.5ms)
+
+
+Started GET "/api/news/gamingthesystem" for 127.0.0.1 at 2017-07-25 18:45:10 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"gamingthesystem"}
+Completed 200 OK in 934ms (Views: 0.4ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:45:16 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 350ms (Views: 1.1ms)
+
+
+Started GET "/pages/SMSF" for 127.0.0.1 at 2017-07-25 18:45:18 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"SMSF"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 21.6ms)
+
+
+Started GET "/api/news/SMSF" for 127.0.0.1 at 2017-07-25 18:45:18 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"SMSF"}
+Completed 200 OK in 1036ms (Views: 0.2ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:45:20 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 425ms (Views: 1.5ms)
+
+
+Started GET "/pages/estimates" for 127.0.0.1 at 2017-07-25 18:45:22 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"estimates"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.1ms)
+
+
+Started GET "/api/news/estimates" for 127.0.0.1 at 2017-07-25 18:45:22 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"estimates"}
+Completed 200 OK in 2087ms (Views: 0.4ms)
+
+
+Started GET "/pages/estimates" for 127.0.0.1 at 2017-07-25 18:46:45 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"estimates"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 23.4ms)
+
+
+Started GET "/api/news/estimates" for 127.0.0.1 at 2017-07-25 18:46:45 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"estimates"}
+Completed 200 OK in 1792ms (Views: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-25 18:47:02 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 22.5ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:47:02 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Started GET "/" for 127.0.0.1 at 2017-07-25 18:47:04 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 16.7ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:47:04 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 3273ms (Views: 1.2ms)
+
+
+Completed 200 OK in 1126ms (Views: 0.9ms)
+
+
+Started GET "/pages/utsideas" for 127.0.0.1 at 2017-07-25 18:47:06 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"utsideas"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 19.7ms)
+
+
+Started GET "/api/news/utsideas" for 127.0.0.1 at 2017-07-25 18:47:06 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"utsideas"}
+Completed 200 OK in 835ms (Views: 0.2ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:47:09 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 291ms (Views: 1.1ms)
+
+
+Started GET "/pages/Sirius" for 127.0.0.1 at 2017-07-25 18:47:10 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Sirius"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 19.9ms)
+
+
+Started GET "/api/news/Sirius" for 127.0.0.1 at 2017-07-25 18:47:10 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Sirius"}
+Completed 200 OK in 1212ms (Views: 0.2ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:47:12 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 254ms (Views: 1.3ms)
+
+
+Started GET "/pages/Matt%20Canavan" for 127.0.0.1 at 2017-07-25 18:47:12 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"Matt Canavan"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 23.6ms)
+
+
+Started GET "/api/news/Matt%20Canavan" for 127.0.0.1 at 2017-07-25 18:47:12 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Matt Canavan"}
+Completed 200 OK in 1295ms (Views: 0.5ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:47:15 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 374ms (Views: 1.8ms)
+
+
+Started GET "/pages/DymCon17" for 127.0.0.1 at 2017-07-25 18:47:17 +1000
+Processing by PagesController#show as HTML
+  Parameters: {"name"=>"DymCon17"}
+  Rendering pages/show.html.erb within layouts/application
+  Rendered pages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 22.7ms)
+
+
+Started GET "/api/news/DymCon17" for 127.0.0.1 at 2017-07-25 18:47:17 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"DymCon17"}
+Completed 200 OK in 1497ms (Views: 0.2ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-25 18:47:20 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 261ms (Views: 1.0ms)
+
+
