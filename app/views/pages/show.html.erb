@@ -7,9 +7,9 @@
 </div>
 
 <script id="news-result-template" type="template">
-<div class="col-sm-6 col-lg-4" style="height: 300px">
+<div class="col-sm-6 col-lg-4" style="height: 350px">
   <div class="thumbnail">
-    <img src={{ image_url }} style="max-height: 200px">
+    <img src={{ image_url }} style="height: 200px">
     <div class="caption">
       <a href={{ url }}>{{ title }}</a>
     </div>
@@ -28,6 +28,9 @@ var $newsContainer = $(".news-container")
 $.ajax({
   url: "/api/news/" + name
 }).done(function(res) {
+  if (res.length <= 0) {
+    $newsContainer.append($("<h1>No Result Found</h1>"))
+  }
 
 
   res.forEach(function(element) {
