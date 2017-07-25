@@ -1,0 +1,24 @@
+<ul>
+
+</ul>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+
+$.ajax({
+  url: '/api/trends/1'
+}).done(function(res){
+  $("ul").html("")
+  res.forEach(function(element) {
+    var url = '/pages/' + element["name"]
+    var link = $("<a>").attr('href', url).text(element["name"])
+    var li = $("<li>").append(link);
+    $("ul").append(li)
+  })
+
+})
+
+
+
+</script>
