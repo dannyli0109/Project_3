@@ -1,19 +1,120 @@
-<ul class="trend-list">
 
-</ul>
+<div class="container">
+  <div id="map"></div>
+  <ul class="trend-list"></ul>
+
+</div>
 
 
 <script>
 
-$.ajax({
-  url: '/api/trends/1'
-}).done(function(res){
-  $(".trend-list").html("")
-  res.forEach(function(element) {
-    $(".trend-list").append($("<li>" + '<a href="/pages/'+ element["name"] + '">' + element["name"] + "</a>" + "</li>"))
-  })
+// This example creates a simple polygon representing the Bermuda Triangle.
+var states = []
+states.push({
+  name: "New South Wales",
+  capital: "Sydney",
+  color: "red",
+  woeid: 1105779
+})
+
+states.push({
+  name: "Victoria",
+  capital: "Melbourne",
+  color: "blue",
+  woeid: 1103816
+})
+
+states.push({
+  name: "Queensland",
+  capital: "Brisbane",
+  color: "green",
+  woeid: 1100661
+})
+
+states.push({
+  name: "South Australia",
+  capital: "Adelaide",
+  color: "yellow",
+  woeid: 1099805
+})
+
+states.push({
+  name: "Western Australia",
+  capital: "Perth",
+  color: "orange",
+  woeid: 1098081
+})
+
+states.push({
+  name: "Tasmaina",
+  capital: "Hobart",
+  color: "purple",
+  woeid: 1102670
+})
+
+states.push({
+  name: "Northern Territory",
+  capital: "Darwin",
+  color: "lime",
+  woeid: 1101597
+})
+
+states.push({
+  name: "Australian Capital Territory",
+  capital: "Canberra",
+  color: "black",
+  woeid: 1100968
 })
 
 
 
+
+
+
+
+
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: {lat: -25.2744, lng: 133.7751},
+    mapTypeId: 'terrain'
+  });
+
+  map.data.loadGeoJson('https://raw.githubusercontent.com/rowanhogan/australian-states/master/states.geojson');
+  // map.data.setStyle({
+  //   fillColor: 'green',
+  //   strokeWeight: 1
+  //
+  // });
+
+  map.data.setStyle(function(feature) {
+
+    var state = states[parseInt(feature.f.STATE_CODE)-1]
+    return {
+      fillColor: state.color,
+      strokeWeight: 1
+    }
+  })
+
+
+  map.data.addListener('click', function(event) {
+    var state = states[parseInt(event.feature.f.STATE_CODE)-1]
+
+    $.ajax({
+      url: '/api/trends/' + state.woeid
+    }).done(function(res){
+      $(".trend-list").html("")
+      res.forEach(function(element) {
+        $(".trend-list").append($("<li>" + '<a href="/pages/'+ element["name"] + '">' + element["name"] + "</a>" + "</li>"))
+      })
+    })
+
+  });
+
+}
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKgnMYlOhK2bPvXLb1K4DwTDfNpCs8s2c&callback=initMap">
 </script>

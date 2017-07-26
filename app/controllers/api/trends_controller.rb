@@ -5,9 +5,10 @@ class Api::TrendsController < ApplicationController
     # Now you will fetch /1.1/statuses/show.json, which
     # takes an 'id' parameter and returns the
     # representation of a single Tweet.
+
     baseurl = "https://api.twitter.com"
     path    = "/1.1/trends/place.json"
-    query   = URI.encode_www_form("id" => "1105779")
+    query   = URI.encode_www_form("id" => params[:id])
     address = URI("#{baseurl}#{path}?#{query}")
     request = Net::HTTP::Get.new address.request_uri
 
