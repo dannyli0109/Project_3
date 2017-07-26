@@ -5,9 +5,10 @@ class Api::TrendsController < ApplicationController
     # Now you will fetch /1.1/statuses/show.json, which
     # takes an 'id' parameter and returns the
     # representation of a single Tweet.
+
     baseurl = "https://api.twitter.com"
     path    = "/1.1/trends/place.json"
-    query   = URI.encode_www_form("id" => "1105779")
+    query   = URI.encode_www_form("id" => params[:id])
     address = URI("#{baseurl}#{path}?#{query}")
     request = Net::HTTP::Get.new address.request_uri
 
@@ -17,10 +18,28 @@ class Api::TrendsController < ApplicationController
 
       trends = []
       tweet[0]["trends"].each do |trend|
+<<<<<<< HEAD
         raise "stop"
         trends.push (Trend.new trend["name"].tr("^A-Za-z0-9 ",""))
       end
+=======
+        clean_word = trend["name"].tr("^A-Za-z0-9 ","")
+        if trend["tweet_volume"] != nil && clean_word != ""
+          character_array = clean_word.split("")
+>>>>>>> 324e7c0cc0ddac9268d550d2ec2ecb5c8da10adf
 
+          i = 1
+          while i < character_array.length-1
+            if character_array[i] == character_array[i].upcase && character_array[i + 1] == character_array[i + 1].downcase && character_array[i-1] != " " && character_array[i + 1] != " "
+              character_array.insert(i, " ")
+              i += 1
+            end
+            i += 1
+          end
+          clean_word = character_array.join("")
+          trends.push (Trend.new clean_word, trend["tweet_volume"])
+        end
+      end
       trends
     end
 
