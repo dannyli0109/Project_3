@@ -17,6 +17,7 @@ class Api::TrendsController < ApplicationController
 
       trends = []
       tweet[0]["trends"].each do |trend|
+        raise "stop"
         trends.push (Trend.new trend["name"].tr("^A-Za-z0-9 ",""))
       end
 
