@@ -106,7 +106,7 @@ function initMap() {
     }).done(function(res){
       $(".trend-list").html("")
       res.forEach(function(element) {
-        $(".trend-list").append($("<li>" + '<a href="/pages/'+ element["name"] + '">' + element["name"] + "</a>" + "</li>"))
+        $(".trend-list").append($("<li>" + '<a href="/pages/'+ element["name"] + '">' + element["name"] + "</a>" + "<p>" + element["volume"] + "</p>" + "</li>"))
       })
     })
 
