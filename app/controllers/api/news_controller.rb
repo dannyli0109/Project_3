@@ -9,16 +9,22 @@ class Api::NewsController < ApplicationController
 
     posts = @result["posts"]
     news = []
-    # title = []
-    # image_url
+    
     posts.each do |post|
-      news_single = News.new post["thread"]["title"], post["thread"]["main_image"], post["thread"]["url"]
-      news.push(news_single)
-      # title.push(post["title"])
-    end
-    # raise "stop"
+      if news.length > 0
+        if !news.any? { |e| e.title ==  post["thread"]["title"]}
+          news_single = News.new post["thread"]["title"], post["thread"]["main_image"], post["thread"]["url"]
+          news.push(news_single)
+        end
 
+      else
+        news_single = News.new post["thread"]["title"], post["thread"]["main_image"], post["thread"]["url"]
+        news.push(news_single)
+      end 
+    end
+    
     render json: news
+
   end
 
 end
