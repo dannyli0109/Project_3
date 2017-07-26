@@ -5,7 +5,7 @@ class Trend
     @name = name
   end
 
-  
+
 
 
 
