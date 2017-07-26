@@ -18,6 +18,9 @@ class Api::TrendsController < ApplicationController
 
       trends = []
       tweet[0]["trends"].each do |trend|
+        trends.push (Trend.new trend["name"].tr("^A-Za-z0-9 ",""))
+      end
+
         clean_word = trend["name"].tr("^A-Za-z0-9 ","")
         if trend["tweet_volume"] != nil && clean_word != ""
           character_array = clean_word.split("")

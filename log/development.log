@@ -15761,6 +15761,11 @@ Processing by PagesController#show as HTML
 Completed 200 OK in 70ms (Views: 65.5ms | ActiveRecord: 0.9ms)
 
 
+<<<<<<< HEAD
+Started GET "/api/twitter/1" for 127.0.0.1 at 2017-07-26 15:39:44 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/api/twitter/1"):
+=======
 Started GET "/" for 127.0.0.1 at 2017-07-26 15:40:35 +1000
   [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by PagesController#index as HTML
@@ -19020,6 +19025,7 @@ Completed 200 OK in 63ms (Views: 58.6ms | ActiveRecord: 0.4ms)
 
   
 ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+>>>>>>> 324e7c0cc0ddac9268d550d2ec2ecb5c8da10adf
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
@@ -19033,12 +19039,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+=======
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
 activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
 activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+>>>>>>> 324e7c0cc0ddac9268d550d2ec2ecb5c8da10adf
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -19053,6 +19063,11 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/api/trend/1" for 127.0.0.1 at 2017-07-26 15:40:05 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/api/trend/1"):
+=======
 Started GET "/api/trends/1103816" for 127.0.0.1 at 2017-07-26 17:59:53 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1103816"}
@@ -19069,6 +19084,7 @@ Completed 200 OK in 103ms (Views: 97.3ms | ActiveRecord: 0.5ms)
 
   
 ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+>>>>>>> 324e7c0cc0ddac9268d550d2ec2ecb5c8da10adf
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
@@ -19082,12 +19098,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+=======
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
 activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
 activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+>>>>>>> 324e7c0cc0ddac9268d550d2ec2ecb5c8da10adf
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -19102,6 +19122,29 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-26 15:40:09 +1000
+Processing by Api::TrendsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 948ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-26 15:41:16 +1000
+Processing by Api::TrendsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 912ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError (stop):
+  
+app/controllers/api/trends_controller.rb:20:in `block in populate_trends'
+app/controllers/api/trends_controller.rb:19:in `each'
+app/controllers/api/trends_controller.rb:19:in `populate_trends'
+app/controllers/api/trends_controller.rb:49:in `show'
+Started PUT "/__web_console/repl_sessions/e6b6c4625d340c7c30b6acd537387526" for 127.0.0.1 at 2017-07-26 15:41:23 +1000
+Started PUT "/__web_console/repl_sessions/e6b6c4625d340c7c30b6acd537387526" for 127.0.0.1 at 2017-07-26 15:41:24 +1000
+=======
 Started GET "/api/trends/1101597" for 127.0.0.1 at 2017-07-26 18:00:10 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1101597"}
@@ -19463,3 +19506,4 @@ Processing by Api::TrendsController#show as */*
 Completed 200 OK in 425ms (Views: 0.3ms | ActiveRecord: 0.0ms)
 
 
+>>>>>>> 324e7c0cc0ddac9268d550d2ec2ecb5c8da10adf
