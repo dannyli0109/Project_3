@@ -1,8 +1,9 @@
 class Trend
-  attr_accessor :name
+  attr_accessor :name, :volume
 
-  def initialize name
+  def initialize name, volume
     @name = name
+    @volume = volume
   end
 
 
