@@ -7,4 +7,8 @@ Rails.application.routes.draw do
   get "/api/trends/:id", to: 'api/trends#show'
   get "/pages/:name", to: "pages#show"
   get "/api/news/:name", to: 'api/news#show'
+
+  get "/history/new", to: "history#create"
+  post "user/:id/history", to: "history#create"
+
 end
