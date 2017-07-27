@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   get "/pages/:name", to: "pages#show"
   get "/api/news/:name", to: 'api/news#show'
 
-  get "/history/new", to: "history#create"
-  post "user/:id/history", to: "history#create"
+  get "/histories/:id/show", to: "histories#show"
+  post "/user/:id/histories", to: "histories#create"
   get "/api/tweets", to: "api/tweets#index"
 
 end
