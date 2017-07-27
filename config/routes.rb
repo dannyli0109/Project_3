@@ -10,5 +10,6 @@ Rails.application.routes.draw do
 
   get "/history/new", to: "history#create"
   post "user/:id/history", to: "history#create"
+  get "/api/tweets", to: "api/tweets#index"
 
 end
