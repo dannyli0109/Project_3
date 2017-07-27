@@ -6,10 +6,21 @@
     <canvas id="chart" width="400" height="400"></canvas>
   </div>
 
+  <div class="row news-container">
+  </div>
 
 </div>
 
-
+<script id="news-result-template" type="template">
+<div class="col-sm-6 col-lg-4" style="height: 350px">
+  <div class="thumbnail">
+    <img src={{ image_url }} style="height: 200px">
+    <div class="caption">
+      <a href={{ url }}>{{ title }}</a>
+    </div>
+  </div>
+</div>
+</script>
 <script>
 
 // This example creates a simple polygon representing the Bermuda Triangle.
@@ -113,7 +124,6 @@ function initMap() {
     $.ajax({
       url: '/api/trends/' + state.woeid
     }).done(function(res){
-
       if (chart) {
         chart.destroy()
       }
@@ -125,13 +135,11 @@ function initMap() {
       res.forEach(function(element) {
         // $(".trend-list").append($("<li>" + '<a href="/pages/'+ element["name"] + '">' + element["name"] + "</a>" + "<p>" + element["volume"] + "</p>" + "</li>"))
 
-
         values.push(element["volume"])
         keys.push(element["name"])
+        //console.log(values);
+        //console.log(keys);
         backgroundColor.push(randomColorGenerator())
-
-
-
 
       })
       var data = {
@@ -146,11 +154,43 @@ function initMap() {
         data: data,
         type: 'doughnut'
       });
+
+      $("#chart").click(function(evt){
+        var activePoints = chart.getElementAtEvent(evt);
+        var name = keys[activePoints["0"]._index];
+
+        var $newsContainer = $(".news-container")
+
+        $.ajax({ url: "/api/news/" + name }).done(function(res) {
+          $newsContainer.html("")
+          if (res.length <= 0) {
+            $newsContainer.append($("<h1>No Result Found</h1>"))
+          }
+          res.forEach(function(element) {
+            var source = $('#news-result-template').html()
+            var template = Handlebars.compile(source)
+            $newsContainer.append(template(element))
+          })
+        $("img")
+      .on('load', function() { console.log("image loaded correctly"); })
+      .on('error', function(event) { console.log($(event.target).attr("src","https://extension.ucsd.edu/UCSDExtension/media/UCSDExtensionsMedia/placeholder.png")); });
+
+        })
+                
+      })
+
+
+
+
+
+
     })
 
   });
-
 }
+
+
+
 </script>
 
 <script async defer
