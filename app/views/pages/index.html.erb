@@ -81,7 +81,8 @@ states.push({
   woeid: 1100968
 })
 
-
+var currentState
+var trend
 
 
 var randomColorGenerator = function () {
@@ -120,10 +121,13 @@ function initMap() {
 
   map.data.addListener('click', function(event) {
     var state = states[parseInt(event.feature.f.STATE_CODE)-1]
+    currentState = state.capital
+    // console.log(state.capital)
 
+   
     $.ajax({
       url: '/api/trends/' + state.woeid
-    }).done(function(res){
+      }).done(function(res){
       if (chart) {
         chart.destroy()
       }
@@ -133,6 +137,7 @@ function initMap() {
       var values = []
       var keys = []
       var cleanNames = []
+
       res.forEach(function(element) {
         // $(".trend-list").append($("<li>" + '<a href="/pages/'+ element["name"] + '">' + element["name"] + "</a>" + "<p>" + element["volume"] + "</p>" + "</li>"))
 
@@ -144,6 +149,7 @@ function initMap() {
         backgroundColor.push(randomColorGenerator())
 
       })
+
       var data = {
         datasets: [{
           data: values,
@@ -160,7 +166,26 @@ function initMap() {
       $("#chart").click(function(evt){
         var activePoints = chart.getElementAtEvent(evt);
         var name = cleanNames[activePoints["0"]._index];
+        trend = activePoints["0"]._model.label
         var $newsContainer = $(".news-container")
+
+        console.log(currentState)
+        console.log(trend)
+        var settings = {
+          method: "POST",
+          url: "/user/1/histories",
+          data: {
+            history: {
+              name: trend,
+              location: currentState
+            }
+          }
+        }
+
+        $.ajax(settings).done(function(res) {
+          // console.log(res)
+        });
+ 
 
         $.ajax({ url: "/api/news/" + name }).done(function(res) {
           $newsContainer.html("")
@@ -180,14 +205,10 @@ function initMap() {
 
       })
 
-
-
-
-
-
     })
 
   });
+
 }
 
 
