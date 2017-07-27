@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get "/api/trends/:id", to: 'api/trends#show'
   get "/pages/:name", to: "pages#show"
   get "/api/news/:name", to: 'api/news#show'
+  get "/api/tweets", to: "api/tweets#index"
+
 end
