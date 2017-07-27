@@ -132,11 +132,13 @@ function initMap() {
       var backgroundColor = []
       var values = []
       var keys = []
+      var cleanNames = []
       res.forEach(function(element) {
         // $(".trend-list").append($("<li>" + '<a href="/pages/'+ element["name"] + '">' + element["name"] + "</a>" + "<p>" + element["volume"] + "</p>" + "</li>"))
 
         values.push(element["volume"])
         keys.push(element["name"])
+        cleanNames.push(element["name_clean"])
         //console.log(values);
         //console.log(keys);
         backgroundColor.push(randomColorGenerator())
@@ -157,8 +159,7 @@ function initMap() {
 
       $("#chart").click(function(evt){
         var activePoints = chart.getElementAtEvent(evt);
-        var name = keys[activePoints["0"]._index];
-
+        var name = cleanNames[activePoints["0"]._index];
         var $newsContainer = $(".news-container")
 
         $.ajax({ url: "/api/news/" + name }).done(function(res) {
@@ -176,7 +177,7 @@ function initMap() {
       .on('error', function(event) { console.log($(event.target).attr("src","https://extension.ucsd.edu/UCSDExtension/media/UCSDExtensionsMedia/placeholder.png")); });
 
         })
-                
+
       })
 
 
