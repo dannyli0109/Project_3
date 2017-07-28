@@ -39868,3 +39868,201 @@ Completed 200 OK in 1203ms (Views: 32.6ms | ActiveRecord: 0.0ms)
 Completed 200 OK in 3833ms (Views: 0.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-07-28 12:33:54 +1000
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 387ms (Views: 366.5ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/api/trends/1098081" for 127.0.0.1 at 2017-07-28 12:34:01 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1098081"}
+Completed 200 OK in 1003ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/tweets?name=White%20House&geocode=-31.9505,115.8605" for 127.0.0.1 at 2017-07-28 12:34:04 +1000
+Started GET "/api/news/White%20House" for 127.0.0.1 at 2017-07-28 12:34:04 +1000
+Processing by Api::TweetsController#index as */*
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"White House", "geocode"=>"-31.9505,115.8605"}
+  Parameters: {"name"=>"White House"}
+Completed 200 OK in 1067ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/tweets?name=White%20House&geocode=-31.9505,115.8605" for 127.0.0.1 at 2017-07-28 12:34:05 +1000
+Processing by Api::TweetsController#index as */*
+  Parameters: {"name"=>"White House", "geocode"=>"-31.9505,115.8605"}
+Completed 200 OK in 939ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 4034ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/news/White%20House" for 127.0.0.1 at 2017-07-28 12:34:08 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"White House"}
+Completed 200 OK in 4089ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/news/Steve%20Bannon" for 127.0.0.1 at 2017-07-28 12:35:17 +1000
+Processing by Api::NewsController#show as */*
+Started GET "/api/tweets?name=Steve%20Bannon&geocode=-31.9505,115.8605" for 127.0.0.1 at 2017-07-28 12:35:17 +1000
+  Parameters: {"name"=>"Steve Bannon"}
+Processing by Api::TweetsController#index as */*
+  Parameters: {"name"=>"Steve Bannon", "geocode"=>"-31.9505,115.8605"}
+Completed 200 OK in 1142ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 4202ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-07-28 12:37:45 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 58.0ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-28 12:37:48 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1105779"}
+Completed 200 OK in 1009ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/tweets?name=Scaramucci&geocode=-33.8688,151.2093" for 127.0.0.1 at 2017-07-28 12:37:51 +1000
+Processing by Api::TweetsController#index as */*
+  Parameters: {"name"=>"Scaramucci", "geocode"=>"-33.8688,151.2093"}
+Started GET "/api/news/Scaramucci" for 127.0.0.1 at 2017-07-28 12:37:51 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Scaramucci"}
+Completed 200 OK in 1045ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 2800ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 12:41:17 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 130ms (Views: 124.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 12:41:39 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 157ms (Views: 153.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-28 12:41:44 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1105779"}
+Completed 200 OK in 1039ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/news/Scaramucci" for 127.0.0.1 at 2017-07-28 12:41:49 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Scaramucci"}
+Started GET "/api/tweets?name=Scaramucci&geocode=-33.8688,151.2093" for 127.0.0.1 at 2017-07-28 12:41:49 +1000
+Processing by Api::TweetsController#index as */*
+  Parameters: {"name"=>"Scaramucci", "geocode"=>"-33.8688,151.2093"}
+Completed 200 OK in 1272ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 2944ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 12:42:08 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/trends/1100661" for 127.0.0.1 at 2017-07-28 12:42:11 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1100661"}
+Completed 200 OK in 1005ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/tweets?name=Scaramucci&geocode=-27.4698,153.0251" for 127.0.0.1 at 2017-07-28 12:42:14 +1000
+Processing by Api::TweetsController#index as */*
+  Parameters: {"name"=>"Scaramucci", "geocode"=>"-27.4698,153.0251"}
+Started GET "/api/news/Scaramucci" for 127.0.0.1 at 2017-07-28 12:42:14 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Scaramucci"}
+Completed 200 OK in 1072ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 2967ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 12:43:28 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 61.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/trends/1098081" for 127.0.0.1 at 2017-07-28 12:43:30 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1098081"}
+Completed 200 OK in 1023ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/news/Scaramucci" for 127.0.0.1 at 2017-07-28 12:43:35 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Scaramucci"}
+Started GET "/api/tweets?name=Scaramucci&geocode=-31.9505,115.8605" for 127.0.0.1 at 2017-07-28 12:43:35 +1000
+Processing by Api::TweetsController#index as */*
+  Parameters: {"name"=>"Scaramucci", "geocode"=>"-31.9505,115.8605"}
+Completed 200 OK in 1204ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 3855ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
