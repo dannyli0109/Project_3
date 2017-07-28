@@ -2,8 +2,6 @@ class HistoriesController < ApplicationController
 
 	def show
 		@histories = History.where(user_id: current_user)
-		# raise "stop"
-
 	end
 
 	def create
@@ -15,5 +13,4 @@ class HistoriesController < ApplicationController
 		# raise "stop"
 		render json: {"status": "success"}
 	end
-
 end
