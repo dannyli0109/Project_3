@@ -2,3 +2,14 @@
     height: 500px;
     margin: 20px;
   }
+
+
+
+.on {
+  opacity: 1;
+}
+
+
+.off {
+  opacity :0;
+}
