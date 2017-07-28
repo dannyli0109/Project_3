@@ -7,3 +7,12 @@
       max-width: 100%;
       max-height: 80%;
   }
+
+.on {
+  opacity: 1;
+}
+
+
+.off {
+  opacity :0;
+}

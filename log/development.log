@@ -33671,6 +33671,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
   [1m[35m (4.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4578808096422711270);[0m
   [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Migrating to CreateHistories (20170727052614)
@@ -33717,6 +33718,26 @@ Started GET "/style=%22height:" for 127.0.0.1 at 2017-07-27 22:34:10 +1000
 ActionController::RoutingError (No route matches [GET] "/style=%22height:"):
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:07:40 +1000
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.2) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
@@ -33743,6 +33764,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
   [1m[36mUser Load (75.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[35m (39.5ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (60.7ms)[0m  [1m[32mINSERT INTO "histories" ("name", "location", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Test"], ["location", "Melbourne"], ["user_id", 1], ["created_at", "2017-07-27 12:34:10.906195"], ["updated_at", "2017-07-27 12:34:10.906195"]]
@@ -33796,6 +33818,35 @@ Completed 200 OK in 2423ms (Views: 1.0ms | ActiveRecord: 0.0ms)
 Started GET "/style=%22height:" for 127.0.0.1 at 2017-07-27 22:34:39 +1000
   
 ActionController::RoutingError (No route matches [GET] "/style=%22height:"):
+=======
+  [1m[35m (21.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4578808096422711270);[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateHistories (20170727052614)
+  [1m[35m (6.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (128.7ms)[0m  [1m[35mCREATE TABLE "histories" ("id" bigserial primary key, "name" character varying, "location" character varying, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_ddbf5f9cca"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_histories_on_user_id" ON "histories"  ("user_id")[0m
+  [1m[35mSQL (4.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170727052614"]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (9.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4578808096422711270)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:08:43 +1000
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 5633ms (Views: 5610.8ms | ActiveRecord: 5.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
@@ -33809,7 +33860,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+=======
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -33824,6 +33884,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started POST "/user/1/histories" for 127.0.0.1 at 2017-07-27 22:35:04 +1000
 Started GET "/api/news/Charli%20XCX" for 127.0.0.1 at 2017-07-27 22:35:04 +1000
 Processing by HistoriesController#create as */*
@@ -33990,6 +34051,18 @@ Processing by Api::NewsController#show as */*
 Started GET "/style=%22height:" for 127.0.0.1 at 2017-07-27 22:36:12 +1000
   
 ActionController::RoutingError (No route matches [GET] "/style=%22height:"):
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:10:27 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (19.7ms)
+  [1m[36mUser Load (341.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 1440ms (Views: 1059.1ms | ActiveRecord: 341.6ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
@@ -34003,7 +34076,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+=======
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -34018,6 +34100,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Completed 200 OK in 3134ms (Views: 0.7ms | ActiveRecord: 0.0ms)
 
 
@@ -34580,6 +34663,8 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 67ms (Views: 61.5ms | ActiveRecord: 0.8ms)
 
 
+=======
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
   
@@ -34615,6 +34700,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2017-07-27 22:46:07 +1000
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
@@ -34622,6 +34708,14 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 173ms (Views: 167.7ms | ActiveRecord: 0.9ms)
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:10:44 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (38.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 946ms (Views: 900.6ms | ActiveRecord: 38.3ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -34659,6 +34753,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-27 22:46:10 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1105779"}
@@ -34684,6 +34779,24 @@ Completed 200 OK in 2104ms (Views: 0.8ms | ActiveRecord: 0.0ms)
 Started GET "/style=%22height:" for 127.0.0.1 at 2017-07-27 22:46:16 +1000
   
 ActionController::RoutingError (No route matches [GET] "/style=%22height:"):
+=======
+Started GET "/api/trends/1098081" for 127.0.0.1 at 2017-07-28 10:10:53 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1098081"}
+Completed 200 OK in 1028ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:16:09 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (13.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 461ms (Views: 427.8ms | ActiveRecord: 13.2ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
@@ -34697,7 +34810,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+=======
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -34712,6 +34834,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/news/Charli%20XCX" for 127.0.0.1 at 2017-07-27 22:46:38 +1000
 Processing by Api::NewsController#show as */*
   Parameters: {"name"=>"Charli XCX"}
@@ -34795,6 +34918,18 @@ Completed 200 OK in 2297ms (Views: 1.1ms | ActiveRecord: 0.0ms)
 Started GET "/style=%22height:" for 127.0.0.1 at 2017-07-27 22:47:15 +1000
   
 ActionController::RoutingError (No route matches [GET] "/style=%22height:"):
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:16:24 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (20.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 375ms (Views: 336.4ms | ActiveRecord: 20.5ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
@@ -34808,7 +34943,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+=======
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -34823,10 +34967,19 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1" for 127.0.0.1 at 2017-07-27 22:47:52 +1000
 Processing by Api::TrendsController#show as HTML
   Parameters: {"id"=>"1"}
 Completed 200 OK in 291ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:18:27 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (14.7ms)
+  [1m[36mUser Load (13.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 458ms (Views: 410.6ms | ActiveRecord: 13.1ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -34864,6 +35017,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2017-07-27 22:48:11 +1000
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
@@ -34871,6 +35025,20 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 97ms (Views: 91.9ms | ActiveRecord: 0.2ms)
+=======
+Started GET "/api/trends/1098081" for 127.0.0.1 at 2017-07-28 10:18:43 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1098081"}
+Completed 200 OK in 943ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:19:31 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (17.5ms)
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 231ms (Views: 213.2ms | ActiveRecord: 7.2ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -34908,6 +35076,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1098081" for 127.0.0.1 at 2017-07-27 22:48:13 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1098081"}
@@ -34949,6 +35118,24 @@ Completed 200 OK in 2005ms (Views: 1.0ms | ActiveRecord: 0.0ms)
 Started GET "/style=%22height:" for 127.0.0.1 at 2017-07-27 22:48:26 +1000
   
 ActionController::RoutingError (No route matches [GET] "/style=%22height:"):
+=======
+Started GET "/api/trends/1098081" for 127.0.0.1 at 2017-07-28 10:19:38 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1098081"}
+Completed 200 OK in 899ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:25:42 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (29.9ms)
+  [1m[36mUser Load (94.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 4547ms (Views: 4413.1ms | ActiveRecord: 94.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
@@ -34962,7 +35149,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+=======
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -34977,6 +35173,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started POST "/user/1/histories" for 127.0.0.1 at 2017-07-27 22:48:33 +1000
 Processing by HistoriesController#create as */*
   Parameters: {"history"=>{"name"=>"Charli XCX", "location"=>"Perth"}, "id"=>"1"}
@@ -35075,6 +35272,20 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 225ms (Views: 211.9ms | ActiveRecord: 0.7ms)
+=======
+Started GET "/api/trends/1098081" for 127.0.0.1 at 2017-07-28 10:25:52 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1098081"}
+Completed 200 OK in 956ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:26:18 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (35.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 320ms (Views: 271.3ms | ActiveRecord: 35.3ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -35112,6 +35323,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-27 23:11:57 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1105779"}
@@ -35137,6 +35349,18 @@ Completed 200 OK in 4460ms (Views: 1.0ms | ActiveRecord: 0.0ms)
 Started GET "/style=%22height:" for 127.0.0.1 at 2017-07-27 23:12:06 +1000
   
 ActionController::RoutingError (No route matches [GET] "/style=%22height:"):
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:33:39 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (12.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 602ms (Views: 561.0ms | ActiveRecord: 12.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
@@ -35150,7 +35374,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+=======
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -35165,6 +35398,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2017-07-27 23:13:38 +1000
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
@@ -35172,6 +35406,14 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 201ms (Views: 181.2ms | ActiveRecord: 1.5ms)
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:34:21 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 3475ms (Views: 3466.6ms | ActiveRecord: 1.1ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -35209,6 +35451,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-27 23:13:49 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1105779"}
@@ -35234,6 +35477,18 @@ Completed 200 OK in 2447ms (Views: 2.7ms | ActiveRecord: 0.0ms)
 Started GET "/style=%22max-height:" for 127.0.0.1 at 2017-07-27 23:13:53 +1000
   
 ActionController::RoutingError (No route matches [GET] "/style=%22max-height:"):
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:34:39 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 4692ms (Views: 4670.4ms | ActiveRecord: 6.9ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
@@ -35247,7 +35502,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+=======
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -35262,6 +35526,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2017-07-27 23:15:19 +1000
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
@@ -35269,6 +35534,14 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 128ms (Views: 123.5ms | ActiveRecord: 0.6ms)
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:34:58 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (12.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 229ms (Views: 200.0ms | ActiveRecord: 12.4ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -35306,6 +35579,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1103816" for 127.0.0.1 at 2017-07-27 23:15:22 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1103816"}
@@ -35331,6 +35605,18 @@ Completed 200 OK in 3142ms (Views: 1.1ms | ActiveRecord: 0.0ms)
 Started GET "/style=%22max-height:" for 127.0.0.1 at 2017-07-27 23:15:28 +1000
   
 ActionController::RoutingError (No route matches [GET] "/style=%22max-height:"):
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:35:10 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 286ms (Views: 267.5ms | ActiveRecord: 6.5ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
@@ -35344,7 +35630,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+=======
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -35359,6 +35654,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2017-07-27 23:16:05 +1000
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
@@ -35366,6 +35662,14 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 101ms (Views: 95.9ms | ActiveRecord: 0.5ms)
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:35:28 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 228ms (Views: 213.3ms | ActiveRecord: 1.0ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -35403,6 +35707,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2017-07-27 23:16:22 +1000
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
@@ -35410,6 +35715,20 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 97ms (Views: 93.4ms | ActiveRecord: 0.7ms)
+=======
+Started GET "/api/trends/1100661" for 127.0.0.1 at 2017-07-28 10:37:50 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1100661"}
+Completed 200 OK in 957ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:49:48 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (7.9ms)
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 4977ms (Views: 4962.7ms | ActiveRecord: 5.7ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -35447,6 +35766,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-27 23:16:25 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1105779"}
@@ -35669,6 +35989,20 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 79ms (Views: 75.2ms | ActiveRecord: 0.5ms)
+=======
+Started GET "/api/trends/1100661" for 127.0.0.1 at 2017-07-28 10:50:29 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1100661"}
+Completed 200 OK in 1010ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:51:19 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (18.7ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 761ms (Views: 733.3ms | ActiveRecord: 2.0ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -35706,6 +36040,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1103816" for 127.0.0.1 at 2017-07-27 23:22:31 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1103816"}
@@ -35783,6 +36118,26 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 265ms (Views: 257.9ms | ActiveRecord: 0.5ms)
+=======
+Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-28 10:51:24 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1105779"}
+Completed 200 OK in 890ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:52:13 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4.8ms)
+Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-28 10:52:18 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1105779"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 5096ms (Views: 5080.2ms | ActiveRecord: 1.2ms)
+
+
+Completed 200 OK in 1049ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -35820,6 +36175,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1100661" for 127.0.0.1 at 2017-07-27 23:24:28 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1100661"}
@@ -35865,6 +36221,20 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 87ms (Views: 83.1ms | ActiveRecord: 0.5ms)
+=======
+Started GET "/api/trends/1100661" for 127.0.0.1 at 2017-07-28 10:52:56 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1100661"}
+Completed 200 OK in 918ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 10:54:00 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (14.9ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 3187ms (Views: 3176.8ms | ActiveRecord: 1.0ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -35902,6 +36272,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1103816" for 127.0.0.1 at 2017-07-27 23:25:20 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1103816"}
@@ -35931,6 +36302,20 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 121ms (Views: 97.8ms | ActiveRecord: 0.5ms)
+=======
+Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-28 10:54:15 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1105779"}
+Completed 200 OK in 908ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:00:23 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (56.4ms)
+  [1m[36mUser Load (109.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 1126ms (Views: 960.2ms | ActiveRecord: 109.3ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -35965,6 +36350,7 @@ rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
 railties (5.1.2) lib/rails/engine.rb:522:in `call'
 puma (3.9.1) lib/puma/configuration.rb:224:in `call'
 puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+<<<<<<< HEAD
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
@@ -35997,6 +36383,23 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 114ms (Views: 110.0ms | ActiveRecord: 0.8ms)
+=======
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/trends/1098081" for 127.0.0.1 at 2017-07-28 11:00:34 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1098081"}
+Completed 200 OK in 1122ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:00:47 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (21.5ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 311ms (Views: 287.4ms | ActiveRecord: 1.3ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -36034,6 +36437,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1103816" for 127.0.0.1 at 2017-07-27 23:29:45 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1103816"}
@@ -36095,6 +36499,20 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 109ms (Views: 103.7ms | ActiveRecord: 0.5ms)
+=======
+Started GET "/api/trends/1098081" for 127.0.0.1 at 2017-07-28 11:01:01 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1098081"}
+Completed 200 OK in 994ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:02:57 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 431ms (Views: 403.7ms | ActiveRecord: 3.5ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -36132,6 +36550,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1103816" for 127.0.0.1 at 2017-07-27 23:30:37 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1103816"}
@@ -36161,6 +36580,14 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 110ms (Views: 104.5ms | ActiveRecord: 0.4ms)
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:06:29 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (30.9ms)
+  [1m[36mUser Load (13.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 712ms (Views: 676.9ms | ActiveRecord: 13.5ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -36198,6 +36625,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-27 23:32:56 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1105779"}
@@ -36243,6 +36671,14 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (27.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 127ms (Views: 94.2ms | ActiveRecord: 27.8ms)
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:06:54 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (22.4ms)
+  [1m[36mUser Load (7.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 535ms (Views: 492.5ms | ActiveRecord: 7.1ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -36280,6 +36716,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2017-07-27 23:33:53 +1000
 Processing by PagesController#index as HTML
   Rendering pages/index.html.erb within layouts/application
@@ -36287,6 +36724,14 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 66ms (Views: 62.1ms | ActiveRecord: 0.9ms)
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:07:49 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 370ms (Views: 343.0ms | ActiveRecord: 5.2ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -36324,6 +36769,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-27 23:33:58 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1105779"}
@@ -36387,6 +36833,28 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 109ms (Views: 105.3ms | ActiveRecord: 0.5ms)
 
 
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:08:07 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (16.3ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 421ms (Views: 400.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:08:08 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (12.7ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 195ms (Views: 188.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:08:09 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4.7ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
   
@@ -36422,6 +36890,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-27 23:35:03 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1105779"}
@@ -36451,6 +36920,10 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 65ms (Views: 58.4ms | ActiveRecord: 3.6ms)
+=======
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 298ms (Views: 284.2ms | ActiveRecord: 0.7ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -36488,6 +36961,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1099805" for 127.0.0.1 at 2017-07-27 23:35:37 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1099805"}
@@ -36549,6 +37023,14 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 88ms (Views: 82.5ms | ActiveRecord: 0.5ms)
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:08:13 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (17.3ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 410ms (Views: 384.2ms | ActiveRecord: 1.5ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -36586,6 +37068,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-27 23:36:31 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1105779"}
@@ -36615,6 +37098,14 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 3201ms (Views: 3172.6ms | ActiveRecord: 8.2ms)
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:09:18 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (7.5ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 245ms (Views: 234.7ms | ActiveRecord: 1.5ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -36652,6 +37143,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-27 23:37:36 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1105779"}
@@ -36681,6 +37173,14 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 2291ms (Views: 2275.8ms | ActiveRecord: 11.6ms)
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:09:32 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (102.1ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 518ms (Views: 491.9ms | ActiveRecord: 1.5ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -36718,6 +37218,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1103816" for 127.0.0.1 at 2017-07-27 23:38:03 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1103816"}
@@ -36795,6 +37296,14 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 801ms (Views: 787.1ms | ActiveRecord: 1.0ms)
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:09:43 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (10.3ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 211ms (Views: 196.2ms | ActiveRecord: 1.1ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -36827,6 +37336,7 @@ actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
 rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
 railties (5.1.2) lib/rails/engine.rb:522:in `call'
+<<<<<<< HEAD
 puma (3.9.1) lib/puma/configuration.rb:224:in `call'
 puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
@@ -37167,6 +37677,25 @@ activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
 actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+=======
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:09:49 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 177ms (Views: 166.2ms | ActiveRecord: 1.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
@@ -37178,7 +37707,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+=======
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -37193,6 +37731,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started DELETE "/session" for 127.0.0.1 at 2017-07-28 09:33:49 +1000
 Processing by SessionsController#destroy as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"dhENCX/PoSAuwI5HVv3dnddCN8JaqUfrMQiuDZTMTfL1IdycoVtXI1szXt/gAk/jvLmIOaP8ipjB42VmqESRjw=="}
@@ -37297,6 +37836,20 @@ activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
 actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:10:04 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 215ms (Views: 197.8ms | ActiveRecord: 6.6ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
 web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
@@ -37308,7 +37861,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+=======
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -37323,6 +37885,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/histories/1/show" for 127.0.0.1 at 2017-07-28 09:37:46 +1000
 Processing by HistoriesController#show as HTML
   Parameters: {"id"=>"1"}
@@ -37829,6 +38392,16 @@ Completed 200 OK in 1011ms (Views: 0.5ms | ActiveRecord: 0.0ms)
 Started GET "/api/news/Scaramucci" for 127.0.0.1 at 2017-07-28 10:13:54 +1000
 Processing by Api::NewsController#show as */*
   Parameters: {"name"=>"Scaramucci"}
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:10:52 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (17.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 401ms (Views: 373.1ms | ActiveRecord: 17.6ms)
+
+
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
   
@@ -37864,6 +38437,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Completed 200 OK in 4323ms (Views: 0.7ms | ActiveRecord: 0.0ms)
 
 
@@ -37874,6 +38448,20 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 103ms (Views: 89.6ms | ActiveRecord: 10.5ms)
+=======
+Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-28 11:10:58 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1105779"}
+Completed 200 OK in 1037ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:11:44 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (16.3ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 770ms (Views: 724.5ms | ActiveRecord: 2.6ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -37911,6 +38499,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-28 10:16:34 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1105779"}
@@ -37930,6 +38519,14 @@ Processing by PagesController#index as HTML
   [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
 Completed 200 OK in 171ms (Views: 161.3ms | ActiveRecord: 2.2ms)
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:11:49 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (99.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 482ms (Views: 374.0ms | ActiveRecord: 99.7ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 
 
   
@@ -37967,6 +38564,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-28 10:18:15 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1105779"}
@@ -37990,6 +38588,61 @@ Completed 200 OK in 104ms (Views: 92.2ms | ActiveRecord: 1.7ms)
 
   
 ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+=======
+Started GET "/api/trends/1100661" for 127.0.0.1 at 2017-07-28 11:11:55 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1100661"}
+Completed 200 OK in 1232ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/news/Steve%20Bannon" for 127.0.0.1 at 2017-07-28 11:11:59 +1000
+Started POST "/user/1/histories" for 127.0.0.1 at 2017-07-28 11:12:00 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Steve Bannon"}
+Processing by HistoriesController#create as */*
+  Parameters: {"history"=>{"name"=>"Steve Bannon", "location"=>"Brisbane"}, "id"=>"1"}
+Completed 200 OK in 5414ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (10.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (27.0ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 6312ms (Views: 0.5ms | ActiveRecord: 673.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:13:04 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 209ms (Views: 197.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/trends/1100661" for 127.0.0.1 at 2017-07-28 11:13:28 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1100661"}
+Completed 200 OK in 986ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/1/histories" for 127.0.0.1 at 2017-07-28 11:13:32 +1000
+Started GET "/api/news/Scaramucci" for 127.0.0.1 at 2017-07-28 11:13:32 +1000
+Processing by HistoriesController#create as */*
+  Parameters: {"history"=>{"name"=>"Scaramucci", "location"=>"Brisbane"}, "id"=>"1"}
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Scaramucci"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 40ms (Views: 0.3ms | ActiveRecord: 2.6ms)
+
+
+Completed 200 OK in 10638ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/style=%22height:" for 127.0.0.1 at 2017-07-28 11:13:43 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/style=%22height:"):
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
@@ -38003,12 +38656,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
 activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
 activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+=======
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -38023,6 +38680,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-28 10:19:24 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1105779"}
@@ -38052,6 +38710,40 @@ Completed 200 OK in 133ms (Views: 118.4ms | ActiveRecord: 1.6ms)
 
   
 ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:14:46 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 219ms (Views: 193.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/trends/1098081" for 127.0.0.1 at 2017-07-28 11:14:54 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1098081"}
+Completed 200 OK in 2324ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/1/histories" for 127.0.0.1 at 2017-07-28 11:15:04 +1000
+Started GET "/api/news/Scaramucci" for 127.0.0.1 at 2017-07-28 11:15:04 +1000
+Processing by HistoriesController#create as */*
+  Parameters: {"history"=>{"name"=>"Scaramucci", "location"=>"Perth"}, "id"=>"1"}
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Scaramucci"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 6.1ms)
+
+
+Completed 200 OK in 4623ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/style=%22height:" for 127.0.0.1 at 2017-07-28 11:15:09 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/style=%22height:"):
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
@@ -38065,12 +38757,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
 activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
 activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+=======
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -38085,6 +38781,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1099805" for 127.0.0.1 at 2017-07-28 10:20:03 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1099805"}
@@ -38114,6 +38811,60 @@ Completed 200 OK in 164ms (Views: 153.1ms | ActiveRecord: 0.5ms)
 
   
 ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:15:42 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 605ms (Views: 596.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:16:02 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 64.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/trends/1100661" for 127.0.0.1 at 2017-07-28 11:16:07 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1100661"}
+Completed 200 OK in 939ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/1/histories" for 127.0.0.1 at 2017-07-28 11:16:10 +1000
+Processing by HistoriesController#create as */*
+  Parameters: {"history"=>{"name"=>"Bihar", "location"=>"Brisbane"}, "id"=>"1"}
+Started GET "/api/news/Bihar" for 127.0.0.1 at 2017-07-28 11:16:10 +1000
+Processing by Api::NewsController#show as */*
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  Parameters: {"name"=>"Bihar"}
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 21ms (Views: 1.1ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/user/1/histories" for 127.0.0.1 at 2017-07-28 11:16:14 +1000
+Processing by HistoriesController#create as */*
+  Parameters: {"history"=>{"name"=>"Scaramucci", "location"=>"Brisbane"}, "id"=>"1"}
+Started GET "/api/news/Scaramucci" for 127.0.0.1 at 2017-07-28 11:16:14 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Scaramucci"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 2.9ms)
+
+
+Completed 200 OK in 4858ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/style=%22height:" for 127.0.0.1 at 2017-07-28 11:16:15 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/style=%22height:"):
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
@@ -38127,12 +38878,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
 activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
 activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+=======
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -38147,6 +38902,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1099805" for 127.0.0.1 at 2017-07-28 10:22:49 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1099805"}
@@ -38188,6 +38944,14 @@ Completed 200 OK in 98ms (Views: 85.0ms | ActiveRecord: 9.7ms)
 
   
 ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+=======
+Completed 200 OK in 3238ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/style=%22height:" for 127.0.0.1 at 2017-07-28 11:16:17 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/style=%22height:"):
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
@@ -38201,12 +38965,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
 activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
 activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+=======
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -38221,6 +38989,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1101597" for 127.0.0.1 at 2017-07-28 10:26:00 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1101597"}
@@ -38362,6 +39131,40 @@ Completed 200 OK in 2090ms (Views: 0.3ms | ActiveRecord: 0.0ms)
 
   
 ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:16:53 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 312ms (Views: 285.7ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/api/trends/1098081" for 127.0.0.1 at 2017-07-28 11:17:13 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1098081"}
+Completed 200 OK in 975ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/1/histories" for 127.0.0.1 at 2017-07-28 11:17:18 +1000
+Processing by HistoriesController#create as */*
+Started GET "/api/news/Bihar" for 127.0.0.1 at 2017-07-28 11:17:18 +1000
+  Parameters: {"history"=>{"name"=>"Bihar", "location"=>"Perth"}, "id"=>"1"}
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Bihar"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 44ms (Views: 0.4ms | ActiveRecord: 2.0ms)
+
+
+Completed 200 OK in 4721ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/style=%22height:" for 127.0.0.1 at 2017-07-28 11:17:22 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/style=%22height:"):
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
@@ -38375,12 +39178,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
 activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
 activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+=======
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -38395,6 +39202,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/news/Bill%20Gates" for 127.0.0.1 at 2017-07-28 10:33:22 +1000
 Processing by Api::NewsController#show as */*
   Parameters: {"name"=>"Bill Gates"}
@@ -38448,6 +39256,40 @@ Completed 200 OK in 85ms (Views: 80.0ms | ActiveRecord: 0.3ms)
 
   
 ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:17:51 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 224ms (Views: 211.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/api/trends/1098081" for 127.0.0.1 at 2017-07-28 11:18:54 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1098081"}
+Completed 200 OK in 1720ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user/1/histories" for 127.0.0.1 at 2017-07-28 11:18:59 +1000
+Processing by HistoriesController#create as */*
+Started GET "/api/news/Bihar" for 127.0.0.1 at 2017-07-28 11:18:59 +1000
+  Parameters: {"history"=>{"name"=>"Bihar", "location"=>"Perth"}, "id"=>"1"}
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"Bihar"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 49ms (Views: 0.9ms | ActiveRecord: 4.0ms)
+
+
+Completed 200 OK in 4540ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/style=%22height:" for 127.0.0.1 at 2017-07-28 11:19:04 +1000
+  
+ActionController::RoutingError (No route matches [GET] "/style=%22height:"):
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
   
 actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
@@ -38461,12 +39303,16 @@ activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagge
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
 activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
 railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+<<<<<<< HEAD
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
 activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
 activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
 activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
 sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+=======
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
 actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
 actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
 rack (2.0.3) lib/rack/method_override.rb:22:in `call'
@@ -38481,6 +39327,7 @@ puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
 puma (3.9.1) lib/puma/server.rb:435:in `process_client'
 puma (3.9.1) lib/puma/server.rb:299:in `block in run'
 puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/api/trends/1100661" for 127.0.0.1 at 2017-07-28 10:35:03 +1000
 Processing by Api::TrendsController#show as */*
   Parameters: {"id"=>"1100661"}
@@ -38753,5 +39600,271 @@ Processing by PagesController#index as HTML
   Rendered pages/index.html.erb within layouts/application (1.3ms)
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
 Completed 200 OK in 61ms (Views: 58.4ms | ActiveRecord: 0.5ms)
+=======
+Started GET "/" for 127.0.0.1 at 2017-07-28 11:23:56 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (64.7ms)
+  [1m[36mUser Load (146.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 1399ms (Views: 1198.6ms | ActiveRecord: 146.2ms)
+>>>>>>> e1ef7e04bc4a0b562aa69847a0b4d37b6aa0cddb
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 12:23:54 +1000
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 2253ms (Views: 2229.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/api/trends/1103816" for 127.0.0.1 at 2017-07-28 12:24:02 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1103816"}
+Completed 200 OK in 1113ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 12:24:11 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 70.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 12:25:04 +1000
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 449ms (Views: 426.3ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/api/trends/1099805" for 127.0.0.1 at 2017-07-28 12:25:08 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1099805"}
+Completed 200 OK in 1360ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 12:26:10 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 299ms (Views: 160.5ms | ActiveRecord: 134.4ms)
+
+
+Started GET "/api/trends/1098081" for 127.0.0.1 at 2017-07-28 12:26:14 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1098081"}
+Completed 200 OK in 956ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2017-07-28 12:26:32 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 57.5ms | ActiveRecord: 2.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/trends/1100661" for 127.0.0.1 at 2017-07-28 12:26:37 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1100661"}
+Completed 200 OK in 1027ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/tweets?name=Bihar&geocode=-27.4698,153.0251" for 127.0.0.1 at 2017-07-28 12:27:04 +1000
+Started GET "/" for 127.0.0.1 at 2017-07-28 12:27:04 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.5ms)
+Processing by Api::TweetsController#index as */*
+Started GET "/api/news/Bihar" for 127.0.0.1 at 2017-07-28 12:27:05 +1000
+  Parameters: {"name"=>"Bihar", "geocode"=>"-27.4698,153.0251"}
+  [1m[36mUser Load (30.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 356ms (Views: 315.8ms | ActiveRecord: 30.7ms)
+
+
+Completed 200 OK in 1038ms (Views: 32.1ms | ActiveRecord: 0.0ms)
+
+
+Processing by Api::NewsController#show as */*
+  
+  Parameters: {"name"=>"Bihar"}
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Completed 200 OK in 2635ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-28 12:27:09 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1105779"}
+Completed 200 OK in 1014ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-07-28 12:27:58 +1000
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 200 OK in 104ms (Views: 101.1ms | ActiveRecord: 0.7ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.min.css.map"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/trends/1105779" for 127.0.0.1 at 2017-07-28 12:28:02 +1000
+Processing by Api::TrendsController#show as */*
+  Parameters: {"id"=>"1105779"}
+Completed 200 OK in 932ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/news/White%20House" for 127.0.0.1 at 2017-07-28 12:28:04 +1000
+Started GET "/api/tweets?name=White%20House&geocode=-33.8688,151.2093" for 127.0.0.1 at 2017-07-28 12:28:04 +1000
+Processing by Api::NewsController#show as */*
+  Parameters: {"name"=>"White House"}
+Processing by Api::TweetsController#index as */*
+  Parameters: {"name"=>"White House", "geocode"=>"-33.8688,151.2093"}
+Completed 200 OK in 1203ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 3833ms (Views: 0.6ms | ActiveRecord: 0.0ms)
 
 

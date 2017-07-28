@@ -1,25 +1,49 @@
 
 <div class="container">
-  <div id="map"></div>
-  <ul class="trend-list"></ul>
-  <canvas id="chart" width="400" height="400"></canvas>
 
-  <div class="row tweets-container"></div>
 
-  <div class="row news-container">
-  </div>
 
-</div>
+  <!-- <div class="va-wrapper"> -->
+  <!-- <div class="va-slice va-slice-1"> -->
+    <h3>1</h3>
+      <div class="va-content">
+        <div id="map">
+        </div>
+      </div>
+  <!-- </div> -->
+  <!-- <div class="va-slice va-slice-2"> -->
+    <h3>2</h3>
+      <div class="va-content" id="graph">
+        <ul class="trend-list"></ul>
+          <div style="width: 800px; height: 800px">
+            <canvas id="chart" width="400" height="400">
+            </canvas>
+          </div>
+      </div>
+  <!-- </div> -->
+  <!-- <div class="va-slice va-slice-3"> -->
+    <h3>3</h3>
+      <div class="va-content">
+        <div class="row tweets-container"></div>
+        <div class="row news-container">
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+<!-- </div> -->
 
 <script id="tweets-result-template" type="template">
 <div class="col-sm-6 col-lg-4">
-
 <blockquote class="twitter-tweet"><a href={{ url }}</a>
 </blockquote>
 </div>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </script>
 
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
 <script id="news-result-template" type="template">
 <div class="col-sm-6 col-lg-4">
 <div class="thumbnail" style="height:300px">
@@ -31,6 +55,19 @@
 </div>
 </script>
 <script>
+
+
+$(function(){
+  $('.container').accordion({
+    collapsible: true
+  })
+  $('.container').accordion("option","active",0)
+
+})
+
+
+
+
 
 // This example creates a simple polygon representing the Bermuda Triangle.
 var states = []
@@ -143,7 +180,9 @@ function initMap() {
     var state = states[parseInt(event.feature.f.STATE_CODE)-1]
     currentState = state.capital
     // console.log(state.capital)
-
+    $(function(){
+      $('.container').accordion("option","active",1)
+    })
 
     $.ajax({
       url: '/api/trends/' + state.woeid
@@ -191,8 +230,10 @@ function initMap() {
         trend = activePoints["0"]._model.label
 
         var nameAlphabet = nameAlphabets[activePoints["0"]._index]
-        debugger
         var $newsContainer = $(".news-container")
+        $(function(){
+          $('.container').accordion("option","active",2)
+        })
 
         var $tweetsContainer = $(".tweets-container")
 
@@ -256,8 +297,6 @@ function initMap() {
   });
 
 }
-
-
 
 </script>
 
