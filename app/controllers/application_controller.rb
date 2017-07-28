@@ -27,6 +27,7 @@ class ApplicationController < ActionController::Base
       trends = []
       tweet[0]["trends"].each do |trend|
         clean_word = trend["name"].tr("^A-Za-z0-9 ","")
+        onlyAlphabet = trend["name"].tr("^A-Za-z0-9 ","")
         if trend["tweet_volume"] != nil && clean_word != ""
           character_array = clean_word.split("")
 
@@ -39,7 +40,7 @@ class ApplicationController < ActionController::Base
             i += 1
           end
           clean_word = character_array.join("")
-          trends.push (Trend.new clean_word, trend["tweet_volume"], trend["name"])
+          trends.push (Trend.new clean_word, trend["tweet_volume"], trend["name"],onlyAlphabet)
         end
       end
       trends
@@ -72,10 +73,10 @@ class ApplicationController < ActionController::Base
     trends
   end
 
-  def twitter_api_call_tweets word
+  def twitter_api_call_tweets word, geocode
     baseurl = "https://api.twitter.com"
     path    = "/1.1/search/tweets.json"
-    query   = URI.encode_www_form("q" => word, "geocode" => "-22.912214,-43.230182,100km")
+    query   = URI.encode_www_form("q" => word, "geocode" => "#{geocode},500km")
     address = URI("#{baseurl}#{path}?#{query}")
     request = Net::HTTP::Get.new address.request_uri
 
@@ -111,5 +112,25 @@ class ApplicationController < ActionController::Base
     end
     tweets
   end
+
+
+  def calculate_duration time
+    target_time = time
+    time_diff = Time.now - target_time
+    minute = 60
+    hour = minute * 60
+    day = hour * 24
+    returnString = ""
+    if time_diff >= day
+      return "#{(time_diff/day).to_i} days ago"
+    elsif time_diff >= hour
+      return "#{(time_diff/hour).to_i} hours ago"
+    elsif time_diff >= minute
+      return "#{(time_diff/minute).to_i} minutes ago"
+    end
+    return "#{time_diff.to_i} seconds ago"
+  end
+  helper_method :calculate_duration
+
 
 end
