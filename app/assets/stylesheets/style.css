@@ -1,12 +1,24 @@
 #map {
-    height: 500px;
-    margin: 20px;
+    height: 96vh;
+    margin: 0;
+    border: 1px solid black;
+    margin-top: -20px;
   }
+
+#chart {
+  height: 600px;
+}
 
   img {
       max-width: 100%;
       max-height: 80%;
   }
+
+/*body {
+  overflow: hidden;
+}*/
+
+
 
 .on {
   opacity: 1;
@@ -15,4 +27,25 @@
 
 .off {
   opacity :0;
+}
+
+
+.flex-news {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.chart-container {
+
+  width: 60%;
+}
+
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 93vh;
+  text-align: center;
+
 }

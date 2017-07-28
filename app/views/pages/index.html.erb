@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="box-container">
 
 
 
@@ -15,17 +15,24 @@
     <h3></h3>
       <div class="va-content" id="graph">
         <ul class="trend-list"></ul>
-          <div style="width: 800px; height: 800px">
+        <div class="outer-container">
+          <div class="chart-container">
             <canvas id="chart" width="400" height="400">
             </canvas>
           </div>
+        </div>
+
+
       </div>
   <!-- </div> -->
   <!-- <div class="va-slice va-slice-3"> -->
     <h3></h3>
       <div class="va-content">
-        <div class="row tweets-container"></div>
-        <div class="row news-container">
+        <div class="row">
+          <div class="col-lg-8">
+              <div class="news-container flex-news"></div>
+          </div>
+          <div class="tweets-container col-lg-4"></div>
         </div>
       </div>
     </div>
@@ -33,10 +40,8 @@
 <!-- </div> -->
 
 <script id="tweets-result-template" type="template">
-<div class="col-sm-6 col-lg-4">
 <blockquote class="twitter-tweet"><a href={{ url }}</a>
 </blockquote>
-</div>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </script>
 
@@ -45,12 +50,10 @@
   integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
   crossorigin="anonymous"></script>
 <script id="news-result-template" type="template">
-<div class="col-sm-6 col-lg-4">
-<div class="thumbnail" style="height:300px">
+<div class="thumbnail" style="height:300px; flex-basis: 48%; padding: 20px 20px 11.6px; margin: 5px; overflow: hidden">
 <img src={{ image_url }}>
 <div class="caption">
 <a href={{ url }}>{{ title }}</a>
-</div>
 </div>
 </div>
 </script>
@@ -58,11 +61,10 @@
 
 
 $(function(){
-  $('.container').accordion({
+  $('.box-container').accordion({
     collapsible: true
   })
-  $('.container').accordion("option","active",0)
-
+  $('.box-container').accordion("option","active",0)
 })
 
 
@@ -71,6 +73,8 @@ $(function(){
 
 // This example creates a simple polygon representing the Bermuda Triangle.
 var states = []
+
+var userId = <%= session[:user_id] %>
 states.push({
   name: "New South Wales",
   capital: "Sydney",
@@ -181,7 +185,7 @@ function initMap() {
     currentState = state.capital
     // console.log(state.capital)
     $(function(){
-      $('.container').accordion("option","active",1)
+      $('.box-container').accordion("option","active",1)
     })
 
     $.ajax({
@@ -232,13 +236,14 @@ function initMap() {
         var nameAlphabet = nameAlphabets[activePoints["0"]._index]
         var $newsContainer = $(".news-container")
         $(function(){
-          $('.container').accordion("option","active",2)
+          $('.box-container').accordion("option","active",2)
         })
 
         var $tweetsContainer = $(".tweets-container")
 
         console.log(currentState)
         console.log(trend)
+
         var settings = {
           method: "POST",
           url: "/user/1/histories",
@@ -249,6 +254,10 @@ function initMap() {
             }
           }
         }
+
+        $.ajax(settings).done(function(res){
+
+        })
 
         $.ajax({ url: "/api/news/" + name }).done(function(res) {
           $newsContainer.html("")
