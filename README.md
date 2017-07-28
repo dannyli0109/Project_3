@@ -16,3 +16,4 @@ There were many challenges faced during this project:
 Future Developments
 In the future we would like to have multiple sources for data trends which when compiled give a more accurate representation of local trends. Also making the site more user friendly and appealing to users. Additional being able to categories trends so that users can have more control.
 
+[Try me](https://geo-trending.herokuapp.com/)
